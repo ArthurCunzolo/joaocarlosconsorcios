@@ -17,12 +17,14 @@
 <meta property="og:site_name" content="João Carlos Cunzolo Jr. — Representante Ademicon">
 <meta property="og:title" content="João Carlos Cunzolo Jr. | Consórcio de Imóveis e Veículos">
 <meta property="og:description" content="Seu próximo grande objetivo começa com um plano. Consórcio para imóveis, veículos e outros projetos, com planejamento personalizado.">
-<meta property="og:image" content="assets/hero-poster.jpg">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:url" content="https://joaocarloscunzolo.com.br/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="João Carlos Cunzolo Jr. | Consórcio de Imóveis e Veículos">
 <meta name="twitter:description" content="Seu próximo grande objetivo começa com um plano.">
-<meta name="twitter:image" content="assets/hero-poster.jpg">
+<meta name="twitter:image" content="assets/og-image.jpg">
 
 <link rel="preload" as="image" href="assets/hero-poster.jpg">
 <link rel="preload" as="font" type="font/woff2" href="assets/vendor/fonts/manrope-latin-800-normal.woff2" crossorigin>
@@ -269,7 +271,7 @@ body.lock #nav,body.lock #nav.on{background:transparent;backdrop-filter:none;
 .goals-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;
   gap:2.5rem;margin-bottom:clamp(3rem,6vw,5rem)}
 .goals-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line2)}
-.goal{position:relative;overflow:hidden;height:clamp(420px,52vw,600px);display:flex;
+.goal{position:relative;overflow:hidden;aspect-ratio:4/5;display:flex;
   flex-direction:column;justify-content:flex-end;padding:clamp(1.6rem,2.4vw,2.4rem);
   background:var(--g1);transition:flex .8s var(--e1)}
 .goal-bg{position:absolute;inset:0;z-index:0}
@@ -495,7 +497,7 @@ body.lock #waFloat{opacity:0;pointer-events:none}
 /* ============ RESPONSIVO ============ */
 @media (max-width:1180px){
   .goals-grid{grid-template-columns:repeat(2,1fr)}
-  .goal{height:clamp(340px,44vw,420px)}
+  .goal{aspect-ratio:4/5}
   .about-grid{grid-template-columns:1fr;gap:3rem}
   .about-media{max-width:460px}
   .faq-grid{grid-template-columns:1fr;gap:2.5rem}
@@ -521,7 +523,7 @@ body.lock #waFloat{opacity:0;pointer-events:none}
 @media (max-width:680px){
   :root{--nav-h:64px}
   .goals-grid{grid-template-columns:1fr}
-  .goal{height:340px}
+  .goal{aspect-ratio:4/5;max-height:74vh}
   .goal .goal-cta{opacity:1;transform:translateY(0)}
   .hero-media video,.hero-media img.poster{object-position:68% 26%}
   .hero-content{padding-bottom:5.5rem}
