@@ -315,23 +315,45 @@ body.lock #nav,body.lock #nav.on{background:transparent;backdrop-filter:none;
 
 /* ============ HOW IT WORKS (horizontal pinned) ============ */
 #how{background:var(--bg);position:relative}
-#howPin{height:100vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+#howPin{height:100vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;position:relative}
+
+/* Paisagem contínua atrás do trilho.
+   A imagem entra por background-image dentro de um @media: assim ela não é
+   baixada no celular, onde a seção vira vertical e a panorâmica não cabe. */
+#howBgWrap{position:absolute;inset:0;z-index:0;overflow:hidden;display:none}
+#howBg{position:absolute;top:0;left:0;height:100%;width:150%;max-width:none;
+  background-size:cover;background-position:center;will-change:transform}
+#howBgWrap::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(5,5,5,.9),rgba(5,5,5,.58) 45%,rgba(5,5,5,.94))}
+.how-head,#howRail,.how-hint{position:relative;z-index:2}
+@media (min-width:901px) and (prefers-reduced-motion:no-preference){
+  #howBgWrap{display:block}
+  #howBg{background-image:image-set(url("assets/how-panorama.webp") type("image/webp"),
+                                    url("assets/how-panorama.jpg") type("image/jpeg"));
+         background-image:-webkit-image-set(url("assets/how-panorama.webp") type("image/webp"),
+                                    url("assets/how-panorama.jpg") type("image/jpeg"))}
+}
 .how-head{padding:0 clamp(1.25rem,5vw,4.5rem);margin-bottom:clamp(2rem,4vw,3.4rem);max-width:1440px;
   margin-left:auto;margin-right:auto;width:100%}
 #howRail{display:flex;gap:2px;padding-left:max(calc((100vw - 1440px)/2 + 4.5rem),1.25rem);will-change:transform}
 .step{flex-shrink:0;width:min(420px,80vw);background:var(--g2);padding:clamp(2rem,3vw,2.8rem);
-  min-height:clamp(320px,40vh,384px);display:flex;flex-direction:column;position:relative;overflow:hidden;
-  transition:background .6s var(--e2)}
+  min-height:clamp(280px,34vh,330px);display:flex;flex-direction:column;justify-content:center;
+  position:relative;overflow:hidden;transition:background .6s var(--e2)}
 .step::before{content:"";position:absolute;top:0;left:0;width:100%;height:1px;background:var(--line);}
 .step::after{content:"";position:absolute;top:0;left:0;width:0;height:1px;background:var(--red);
   transition:width 1s var(--e1)}
 .step:hover{background:var(--g3)}
+@media (min-width:901px) and (prefers-reduced-motion:no-preference){
+  .step{background:rgba(8,8,10,.42);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);
+    border:1px solid rgba(244,244,242,.09)}
+  .step:hover{background:rgba(14,14,18,.66)}
+}
 .step:hover::after{width:100%}
-.step-num{font-family:var(--fd);font-size:clamp(3rem,4.4vw,4.4rem);font-weight:200;line-height:1;
-  color:transparent;-webkit-text-stroke:1px rgba(244,244,242,.22);margin-bottom:auto;letter-spacing:-.04em;
+.step-num{font-family:var(--fd);font-size:clamp(2.4rem,3.4vw,3.4rem);font-weight:200;line-height:1;
+  color:transparent;-webkit-text-stroke:1px rgba(244,244,242,.22);margin-bottom:1.4rem;letter-spacing:-.04em;
   transition:-webkit-text-stroke-color .6s}
 .step:hover .step-num{-webkit-text-stroke-color:rgba(224,30,38,.65)}
-.step h3{font-size:clamp(1.2rem,1.7vw,1.5rem);margin:2.2rem 0 .9rem}
+.step h3{font-size:clamp(1.2rem,1.7vw,1.5rem);margin:0 0 .8rem}
 .step p{font-size:.88rem;color:var(--wdim);font-weight:300;line-height:1.68}
 .how-hint{display:flex;align-items:center;gap:.8rem;margin-top:clamp(1.6rem,3vw,2.4rem);
   padding:0 clamp(1.25rem,5vw,4.5rem);max-width:1440px;margin-left:auto;margin-right:auto;width:100%;
@@ -742,6 +764,7 @@ body.lock #waFloat{opacity:0;pointer-events:none}
 <!-- ============ COMO FUNCIONA ============ -->
 <section id="how" aria-labelledby="howTitle">
   <div id="howPin">
+    <div id="howBgWrap" aria-hidden="true"><div id="howBg"></div></div>
     <div class="how-head">
       <div class="ey rv">Jornada</div>
       <h2 id="howTitle" class="h-lg rv-title" style="max-width:14ch">Do objetivo ao patrimônio.</h2>
@@ -1423,6 +1446,7 @@ function initHorizontal(){
   var pin  = document.getElementById("howPin");
   var sec  = document.getElementById("how");
   var bar  = document.getElementById("howBar");
+  var bg   = document.getElementById("howBg");
   if(!rail || !pin || !sec) return;
 
   function dist(){
@@ -1434,7 +1458,11 @@ function initHorizontal(){
     scrollTrigger:{
       trigger:sec, start:"top top", end:function(){ return "+="+dist(); },
       pin:pin, scrub:.6, anticipatePin:1, invalidateOnRefresh:true,
-      onUpdate:function(s){ if(bar) bar.style.width = (s.progress*100)+"%"; }
+      onUpdate:function(s){
+        if(bar) bar.style.width = (s.progress*100)+"%";
+        /* a paisagem anda a 30% da velocidade do trilho */
+        if(bg) bg.style.transform = "translateX(" + (-dist()*s.progress*0.3) + "px)";
+      }
     }
   });
 

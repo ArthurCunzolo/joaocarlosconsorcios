@@ -2,3 +2,8 @@
 Thumbs.db
 node_modules/
 *.log
+
+# Mockups de variação usados para comparar layouts em navegador.
+# Ficam de fora do repositório: se subissem, seriam publicados como páginas
+# reais do site (ex.: /var-e.html) e indexadas pelo Google.
+var-*.html
