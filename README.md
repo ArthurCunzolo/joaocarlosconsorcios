@@ -1,30 +1,50 @@
 # Landing Page — João Carlos Cunzolo Jr. | Representante Ademicon
 
-Landing page single-file, sem build step. Basta abrir `index.html` ou subir a pasta inteira em qualquer hospedagem estática.
+Site estático de 5 páginas, sem build step. Suba a pasta inteira em qualquer
+hospedagem estática — não há nada para compilar ou instalar.
 
 ## Estrutura
 
+O site tem 5 páginas. CSS e JavaScript são compartilhados entre todas — o
+navegador baixa uma vez só e as páginas seguintes carregam instantaneamente.
+
 ```
-index.html          → a página inteira (HTML + CSS + JS)
+index.html            → Home (foco em conversão)
+solucoes/index.html   → /solucoes  — detalhe de cada objetivo + comparativo
+sobre/index.html      → /sobre     — João Carlos, atendimento e a Ademicon
+duvidas/index.html    → /duvidas   — FAQ, tipos de lance e glossário
+simular/index.html    → /simular   — formulário dedicado (página de conversão)
 assets/
-  hero.mp4          → vídeo do Hero (comprimido, sem áudio, 440 KB)
-  hero-poster.jpg   → imagem exibida enquanto o vídeo carrega
-  cta-frame.jpg     → frame do vídeo usado no CTA cinematográfico
-  joao-carlos.jpg   → retrato usado na seção "Sobre"
-  ademicon-mark.png → símbolo Ademicon em branco (navbar/rodapé)
-  ademicon-white.png→ lockup completo Ademicon em branco
-  goal-*.jpg/.webp  → texturas de fundo dos 4 objetivos
+  site.css            → todo o CSS do site
+  site.js             → todo o JavaScript (animações, WhatsApp, formulário)
+  hero.mp4            → vídeo do Hero (comprimido, sem áudio, 440 KB)
+  hero-poster.jpg     → imagem exibida enquanto o vídeo carrega
+  cta-frame.jpg       → frame do vídeo usado no CTA cinematográfico
+  joao-carlos.jpg     → retrato usado em /sobre e na home
+  ademicon-mark.png   → símbolo Ademicon em branco (navbar)
+  ademicon-white.png  → lockup completo Ademicon (loader e rodapé)
+  goal-*.jpg/.webp    → texturas de fundo dos 4 objetivos
   favicon.png
-  vendor/           → GSAP, ScrollTrigger, Lenis, SplitType e as fontes
+  vendor/             → GSAP, ScrollTrigger, Lenis, SplitType e as fontes
 ```
 
-Tudo é hospedado localmente — a página **não depende de nenhum CDN externo** e funciona
-até offline.
+As páginas internas usam pastas (`sobre/index.html`) para que as URLs fiquem
+limpas — `/sobre` em vez de `/sobre.html` — em qualquer hospedagem estática.
+
+**Para ver localmente**, abra um servidor na pasta em vez de dar duplo clique no
+arquivo (`file://` não resolve links de pasta):
+
+```bash
+python3 -m http.server 8000
+# depois acesse http://localhost:8000
+```
+
+Tudo é hospedado localmente — o site **não depende de nenhum CDN externo**.
 
 ## O que editar
 
 ### 1. WhatsApp
-Abra `index.html`, procure por `var CONFIG` (perto do fim do arquivo):
+Abra `assets/site.js` — as primeiras linhas do arquivo:
 
 ```js
 var CONFIG = {
@@ -34,13 +54,19 @@ var CONFIG = {
 };
 ```
 
-Trocar o número aqui atualiza **todos** os 10 CTAs da página de uma vez.
+Trocar o número aqui atualiza os CTAs de **todas as 5 páginas** de uma vez.
 
 ### 2. Dados reais do João Carlos
-Na seção "Sobre" existe um bloco marcado com o comentário
-`<!-- Espaço reservado: substituir por dados reais ... -->`.
-É onde entram anos de experiência, região de atuação, certificações — quando
-essas informações forem confirmadas. Nada foi inventado.
+Em `sobre/index.html` existe um bloco marcado com o comentário
+`<!-- ESPAÇO RESERVADO — preencher com informações reais -->`.
+É onde entram anos de atuação, região atendida, formação e especialidades —
+quando essas informações forem confirmadas. Nada ali foi presumido.
+
+O único dado sobre a Ademicon que aparece no site ("o consórcio que mais cresce
+no Brasil") vem do material institucional da própria Ademicon e está publicado
+com a fonte completa logo abaixo, incluindo a data-base do Banco Central.
+Se esse número for atualizado pela administradora, atualize também o rodapé
+daquele parágrafo em `sobre/index.html`.
 
 ### 3. Fotos das 4 possibilidades (Imóveis / Veículos / Negócios / Outros)
 As imagens `assets/goal-*.jpg` são texturas abstratas geradas como placeholder
@@ -49,8 +75,14 @@ elegante. Para trocar por fotos reais, substitua os arquivos mantendo os nomes
 `<source srcset="...">` no HTML.
 
 ### 4. Domínio
-Antes de publicar, troque `https://joaocarloscunzolo.com.br/` pelo domínio real
-em três pontos: `<link rel="canonical">`, `og:url` e o bloco Schema.org.
+Antes de publicar, troque `joaocarloscunzolo.com.br` pelo domínio real. Ele
+aparece em `canonical`, `og:url`, `og:image` e nos blocos Schema.org — nas cinco
+páginas. Um find-and-replace no projeto inteiro resolve:
+
+```bash
+grep -rl "joaocarloscunzolo.com.br" --include="*.html" . \
+  | xargs sed -i "s|joaocarloscunzolo.com.br|SEUDOMINIO.com.br|g"
+```
 
 ## Publicar
 
@@ -67,6 +99,8 @@ Nenhuma configuração de build é necessária em nenhum dos dois.
 - `prefers-reduced-motion` é respeitado — animações são desligadas para quem
   configurou isso no sistema.
 - O formulário **não calcula valores**. Ele monta uma mensagem com as respostas e
-  abre o WhatsApp — a simulação real acontece no atendimento.
+  abre o WhatsApp — a simulação real acontece no atendimento. Ele existe em dois
+  lugares (home e /simular) e funciona igual nos dois.
+- A navbar destaca sozinha a página atual, via `data-page` no `<body>`.
 - Cursor customizado, scroll horizontal pinado e partículas são desativados
   automaticamente em telas pequenas e em dispositivos de toque.

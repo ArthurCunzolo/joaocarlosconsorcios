@@ -11,553 +11,32 @@
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
 
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="João Carlos Cunzolo Jr. — Representante Ademicon">
 <meta property="og:title" content="João Carlos Cunzolo Jr. | Consórcio de Imóveis e Veículos">
-<meta property="og:description" content="Seu próximo grande objetivo começa com um plano. Consórcio para imóveis, veículos e outros projetos, com planejamento personalizado.">
-<meta property="og:image" content="assets/hero-poster.jpg">
+<meta property="og:description" content="Planeje seu próximo grande objetivo com consórcio para imóveis, veículos e outros projetos. Fale com João Carlos Cunzolo Jr., representante Ademicon.">
+<meta property="og:image" content="https://joaocarloscunzolo.com.br/assets/hero-poster.jpg">
 <meta property="og:url" content="https://joaocarloscunzolo.com.br/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="João Carlos Cunzolo Jr. | Consórcio de Imóveis e Veículos">
-<meta name="twitter:description" content="Seu próximo grande objetivo começa com um plano.">
-<meta name="twitter:image" content="assets/hero-poster.jpg">
+<meta name="twitter:description" content="Planeje seu próximo grande objetivo com consórcio para imóveis, veículos e outros projetos. Fale com João Carlos Cunzolo Jr., representante Ademicon.">
+<meta name="twitter:image" content="https://joaocarloscunzolo.com.br/assets/hero-poster.jpg">
 
-<link rel="preload" as="image" href="assets/hero-poster.jpg">
 <link rel="preload" as="font" type="font/woff2" href="assets/vendor/fonts/manrope-latin-800-normal.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="assets/vendor/fonts/inter-latin-300-normal.woff2" crossorigin>
-
-<style>
-/* ============================================================
-   FONTES — self-hosted (sem dependência de CDN externo)
-   ============================================================ */
-@font-face{font-family:"Manrope";font-style:normal;font-weight:200;font-display:swap;src:url("assets/vendor/fonts/manrope-latin-200-normal.woff2") format("woff2")}
-@font-face{font-family:"Manrope";font-style:normal;font-weight:300;font-display:swap;src:url("assets/vendor/fonts/manrope-latin-300-normal.woff2") format("woff2")}
-@font-face{font-family:"Manrope";font-style:normal;font-weight:400;font-display:swap;src:url("assets/vendor/fonts/manrope-latin-400-normal.woff2") format("woff2")}
-@font-face{font-family:"Manrope";font-style:normal;font-weight:500;font-display:swap;src:url("assets/vendor/fonts/manrope-latin-500-normal.woff2") format("woff2")}
-@font-face{font-family:"Manrope";font-style:normal;font-weight:600;font-display:swap;src:url("assets/vendor/fonts/manrope-latin-600-normal.woff2") format("woff2")}
-@font-face{font-family:"Manrope";font-style:normal;font-weight:700;font-display:swap;src:url("assets/vendor/fonts/manrope-latin-700-normal.woff2") format("woff2")}
-@font-face{font-family:"Manrope";font-style:normal;font-weight:800;font-display:swap;src:url("assets/vendor/fonts/manrope-latin-800-normal.woff2") format("woff2")}
-@font-face{font-family:"Inter";font-style:normal;font-weight:300;font-display:swap;src:url("assets/vendor/fonts/inter-latin-300-normal.woff2") format("woff2")}
-@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url("assets/vendor/fonts/inter-latin-400-normal.woff2") format("woff2")}
-@font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url("assets/vendor/fonts/inter-latin-500-normal.woff2") format("woff2")}
-@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url("assets/vendor/fonts/inter-latin-600-normal.woff2") format("woff2")}
-/* ============================================================
-   SISTEMA DE DESIGN — João Carlos Cunzolo Jr. | Ademicon
-   Premium · Financeiro · Cinematográfico · Minimalista
-   ============================================================ */
-:root{
-  /* Fundos */
-  --bg:#050505;
-  --g1:#0A0A0B;
-  --g2:#101013;
-  --g3:#16161A;
-
-  /* Marca (uso extremamente moderado) */
-  --red:#E01E26;
-  --rdk:#A8151B;
-
-  /* Neutros */
-  --white:#F4F4F2;
-  --wdim:rgba(244,244,242,.56);
-  --wfaint:rgba(244,244,242,.34);
-  --line:rgba(244,244,242,.10);
-  --line2:rgba(244,244,242,.055);
-  --steel:#9AA0A8;
-
-  /* Utilitária */
-  --wa:#25D366;
-
-  /* Tipografia */
-  --fd:"Manrope",-apple-system,BlinkMacSystemFont,sans-serif;
-  --fb:"Inter",-apple-system,BlinkMacSystemFont,sans-serif;
-
-  /* Easings */
-  --e1:cubic-bezier(.16,1,.3,1);
-  --e2:cubic-bezier(.25,.46,.45,.94);
-  --e3:cubic-bezier(.34,1.56,.64,1);
-
-  --nav-h:76px;
-}
-
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:auto;-webkit-text-size-adjust:100%}
-body{
-  background:var(--bg);color:var(--white);
-  font-family:var(--fb);font-weight:400;line-height:1.6;
-  overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
-  font-feature-settings:"ss01","cv11";
-}
-body.lock{overflow:hidden}
-img,video{display:block;max-width:100%}
-a{color:inherit;text-decoration:none}
-button,input,select,textarea{font:inherit;color:inherit;background:none;border:none;outline:none}
-::selection{background:var(--red);color:#fff}
-:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:2px}
-
-/* Layout base */
-.wrap{max-width:1440px;margin:0 auto;padding:0 clamp(1.25rem,5vw,4.5rem)}
-.sec{padding:clamp(5.5rem,11vw,11rem) 0;position:relative}
-section[id]{scroll-margin-top:calc(var(--nav-h) + 10px)}
-
-/* Tipografia utilitária */
-.ey{display:flex;align-items:center;gap:.9rem;font-family:var(--fb);font-size:.6rem;font-weight:600;
-    letter-spacing:.42em;color:var(--wfaint);text-transform:uppercase;margin-bottom:1.5rem}
-.ey::before{content:"";width:30px;height:1px;background:var(--red);flex-shrink:0;opacity:.85}
-h1,h2,h3,h4{font-family:var(--fd);font-weight:800;letter-spacing:-.035em;line-height:.98}
-.h-xl{font-size:clamp(2.5rem,7.2vw,6.4rem)}
-.h-lg{font-size:clamp(2.1rem,5.4vw,4.6rem)}
-.h-md{font-size:clamp(1.6rem,3.2vw,2.7rem);letter-spacing:-.025em}
-.lead{font-size:clamp(1rem,1.32vw,1.16rem);color:var(--wdim);line-height:1.72;font-weight:300;max-width:56ch}
-.thin{font-weight:200}
-.muted{color:var(--wdim)}
-
-/* ============ CURSOR CUSTOMIZADO ============ */
-#cd{position:fixed;top:0;left:0;width:5px;height:5px;background:var(--white);border-radius:50%;
-    pointer-events:none;z-index:9500;transform:translate(-50%,-50%);mix-blend-mode:difference;
-    transition:width .25s var(--e1),height .25s var(--e1);opacity:0}
-#cr{position:fixed;top:0;left:0;width:32px;height:32px;border:1px solid rgba(244,244,242,.28);border-radius:50%;
-    pointer-events:none;z-index:9499;transform:translate(-50%,-50%);
-    transition:width .45s var(--e1),height .45s var(--e1),border-color .35s,background .35s;opacity:0}
-body.cur-on #cd,body.cur-on #cr{opacity:1}
-body.cur-on{cursor:none}
-body.cur-on a,body.cur-on button,body.cur-on .clk{cursor:none}
-body.hl #cd{width:8px;height:8px;background:var(--red)}
-body.hl #cr{width:52px;height:52px;border-color:rgba(224,30,38,.55);background:rgba(224,30,38,.05)}
-
-/* ============ PROGRESS ============ */
-#progress{position:fixed;top:0;left:0;z-index:9100;height:2px;width:0;
-  background:linear-gradient(90deg,var(--rdk),var(--red));pointer-events:none}
-
-/* ============ LOADER ============ */
-#loader{position:fixed;inset:0;z-index:9800;background:var(--bg);display:flex;
-  align-items:center;justify-content:center;flex-direction:column}
-#loader canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.5}
-.ld-in{position:relative;text-align:center;z-index:2}
-.ld-mark{width:86px;height:auto;margin:0 auto 2.1rem;opacity:0}
-.ld-name{font-family:var(--fd);font-size:.72rem;font-weight:600;letter-spacing:.5em;
-  text-transform:uppercase;color:var(--wdim);margin-bottom:2.2rem;opacity:0}
-.ld-bar{width:min(240px,52vw);height:1px;background:rgba(244,244,242,.12);margin:0 auto;position:relative;overflow:hidden}
-.ld-fill{position:absolute;inset:0;width:0;background:linear-gradient(90deg,var(--rdk),var(--red))}
-.ld-pct{margin-top:1.1rem;font-family:var(--fd);font-size:.68rem;letter-spacing:.3em;color:var(--wfaint)}
-
-/* ============ NAV ============ */
-#nav{position:fixed;top:0;left:0;right:0;z-index:8600;height:var(--nav-h);
-  display:flex;align-items:center;transition:background .6s var(--e2),backdrop-filter .6s,border-color .6s,height .5s var(--e2);
-  border-bottom:1px solid transparent}
-body.lock #nav,body.lock #nav.on{background:transparent;backdrop-filter:none;
-  -webkit-backdrop-filter:none;border-bottom-color:transparent}
-#nav.on{background:rgba(5,5,5,.82);backdrop-filter:blur(22px) saturate(140%);
-  -webkit-backdrop-filter:blur(22px) saturate(140%);border-bottom-color:var(--line2);height:66px}
-#nav .wrap{display:flex;align-items:center;justify-content:space-between;width:100%;gap:2rem}
-.brand{display:flex;align-items:center;gap:.95rem;flex-shrink:0}
-.brand img{height:29px;width:auto;opacity:.95}
-.brand-div{width:1px;height:22px;background:var(--line);flex-shrink:0}
-.brand-txt{display:flex;flex-direction:column;line-height:1.15}
-.brand-txt b{font-family:var(--fd);font-size:.76rem;font-weight:700;letter-spacing:-.01em}
-.brand-txt span{font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:var(--wfaint)}
-.nav-links{display:flex;align-items:center;gap:2.3rem}
-.nav-links a{font-size:.79rem;font-weight:400;color:var(--wdim);position:relative;transition:color .4s var(--e2)}
-.nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--red);
-  transition:width .45s var(--e1)}
-.nav-links a:hover{color:var(--white)}
-.nav-links a:hover::after{width:100%}
-.nav-cta{display:flex;align-items:center;gap:1rem}
-
-/* Botões */
-.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:.7rem;
-  font-family:var(--fd);font-weight:600;letter-spacing:.03em;white-space:nowrap;overflow:hidden;
-  transition:color .45s var(--e2),border-color .45s var(--e2),transform .2s}
-.btn span{position:relative;z-index:2;display:inline-flex;align-items:center;gap:.65rem}
-.btn::before{content:"";position:absolute;inset:0;transform:translateY(101%);transition:transform .55s var(--e1);z-index:1}
-.btn:hover::before{transform:translateY(0)}
-.btn .ar{transition:transform .45s var(--e1);display:inline-block}
-.btn:hover .ar{transform:translateX(5px)}
-
-.btn-sm{padding:.72rem 1.35rem;font-size:.74rem;border:1px solid var(--line);border-radius:2px;color:var(--white)}
-.btn-sm::before{background:var(--red)}
-.btn-sm:hover{border-color:var(--red)}
-
-.btn-primary{padding:1.15rem 2.3rem;font-size:.83rem;background:var(--white);color:#050505;border-radius:2px}
-.btn-primary::before{background:var(--red)}
-.btn-primary:hover{color:#fff}
-
-.btn-ghost{padding:1.15rem 2.1rem;font-size:.83rem;border:1px solid var(--line);border-radius:2px;color:var(--white)}
-.btn-ghost::before{background:rgba(244,244,242,.09)}
-.btn-ghost:hover{border-color:rgba(244,244,242,.35)}
-
-.btn-lg{padding:1.5rem 3.2rem;font-size:.95rem;background:var(--red);color:#fff;border-radius:2px}
-.btn-lg::before{background:var(--white)}
-.btn-lg:hover{color:#050505}
-
-/* Hamburger */
-#menuBtn{display:none;width:40px;height:40px;position:relative;flex-shrink:0;z-index:2}
-#menuBtn i{position:absolute;left:9px;width:22px;height:1.5px;background:var(--white);
-  transition:transform .5s var(--e1),opacity .3s,width .4s var(--e1)}
-#menuBtn i:nth-child(1){top:16px}
-#menuBtn i:nth-child(2){top:23px;width:15px}
-#menuBtn.x i:nth-child(1){transform:translateY(3.5px) rotate(45deg)}
-#menuBtn.x i:nth-child(2){transform:translateY(-3.5px) rotate(-45deg);width:22px}
-
-#mobileMenu{position:fixed;inset:0;z-index:8500;background:rgba(5,5,5,.98);backdrop-filter:blur(26px);
-  display:flex;flex-direction:column;justify-content:center;padding:0 clamp(1.5rem,7vw,3rem);
-  clip-path:inset(0 0 100% 0);transition:clip-path .85s var(--e1);pointer-events:none}
-#mobileMenu.open{clip-path:inset(0 0 0 0);pointer-events:auto}
-#mobileMenu a.ml{font-family:var(--fd);font-size:clamp(1.9rem,8.5vw,3rem);font-weight:800;letter-spacing:-.035em;
-  padding:.42rem 0;opacity:0;transform:translateY(28px);transition:opacity .6s var(--e1),transform .6s var(--e1),color .3s;
-  display:flex;align-items:baseline;gap:1rem}
-#mobileMenu a.ml i{font-style:normal;font-size:.58rem;font-family:var(--fb);letter-spacing:.2em;color:var(--red);font-weight:600}
-#mobileMenu.open a.ml{opacity:1;transform:translateY(0)}
-#mobileMenu.open a.ml:nth-child(1){transition-delay:.14s}
-#mobileMenu.open a.ml:nth-child(2){transition-delay:.20s}
-#mobileMenu.open a.ml:nth-child(3){transition-delay:.26s}
-#mobileMenu.open a.ml:nth-child(4){transition-delay:.32s}
-#mobileMenu.open a.ml:nth-child(5){transition-delay:.38s}
-#mobileMenu.open a.ml:nth-child(6){transition-delay:.44s}
-.mm-foot{margin-top:2.8rem;opacity:0;transform:translateY(20px);transition:all .6s var(--e1) .52s}
-#mobileMenu.open .mm-foot{opacity:1;transform:translateY(0)}
-
-/* ============ HERO ============ */
-#hero{position:relative;height:100svh;min-height:600px;overflow:hidden;display:flex;align-items:flex-end}
-.hero-media{position:absolute;inset:-6% 0 -6% 0;z-index:0;will-change:transform}
-.hero-media video,.hero-media img.poster{width:100%;height:100%;object-fit:cover;object-position:62% 28%}
-.hero-media img.poster{position:absolute;inset:0}
-.hero-ov{position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:
-    linear-gradient(to top,rgba(5,5,5,.97) 0%,rgba(5,5,5,.72) 26%,rgba(5,5,5,.28) 52%,rgba(5,5,5,.42) 80%,rgba(5,5,5,.72) 100%),
-    linear-gradient(to right,rgba(5,5,5,.88) 0%,rgba(5,5,5,.55) 38%,rgba(5,5,5,.06) 70%)}
-.hero-grain{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:.045;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E")}
-.hero-content{position:relative;z-index:4;width:100%;padding-bottom:clamp(4.5rem,9vh,7rem)}
-.hero-eyebrow{display:flex;align-items:center;gap:.85rem;margin-bottom:1.7rem;opacity:0}
-.hero-eyebrow .dot{width:5px;height:5px;border-radius:50%;background:var(--red);flex-shrink:0;
-  box-shadow:0 0 0 0 rgba(224,30,38,.5);animation:pulse 2.6s infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(224,30,38,.45)}70%{box-shadow:0 0 0 11px rgba(224,30,38,0)}100%{box-shadow:0 0 0 0 rgba(224,30,38,0)}}
-.hero-eyebrow span{font-size:.62rem;font-weight:500;letter-spacing:.34em;text-transform:uppercase;color:var(--wdim)}
-#headline{max-width:16ch;margin-bottom:1.9rem}
-#headline .ln{display:block;overflow:hidden}
-#headline em{font-style:normal;color:var(--white);position:relative;display:inline-block}
-#headline em::after{content:"";position:absolute;left:0;bottom:.1em;width:100%;height:2px;
-  background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform 1.1s var(--e1)}
-#headline.done em::after{transform:scaleX(1)}
-.hero-sub{max-width:47ch;font-size:clamp(.95rem,1.24vw,1.1rem);color:var(--wdim);font-weight:300;
-  line-height:1.72;margin-bottom:2.7rem;opacity:0}
-.hero-actions{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;opacity:0}
-.hero-scroll{position:absolute;left:0;right:0;bottom:1.6rem;z-index:5;opacity:0}
-.hero-scroll .wrap{display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
-.scroll-cue{display:flex;align-items:center;gap:.85rem;font-size:.63rem;letter-spacing:.28em;
-  text-transform:uppercase;color:var(--wfaint)}
-.scroll-cue .track{width:34px;height:1px;background:rgba(244,244,242,.2);position:relative;overflow:hidden}
-.scroll-cue .track::after{content:"";position:absolute;inset:0;background:var(--red);
-  animation:trk 2.4s var(--e2) infinite}
-@keyframes trk{0%{transform:translateX(-100%)}55%{transform:translateX(0)}100%{transform:translateX(100%)}}
-.hero-badge{display:flex;align-items:center;gap:.7rem;font-size:.63rem;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--wfaint)}
-.hero-badge img{height:17px;opacity:.62}
-
-/* ============ TICKER ============ */
-.ticker{border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);
-  padding:1.35rem 0;overflow:hidden;background:var(--g1)}
-.ticker-track{display:flex;width:max-content;will-change:transform}
-.ticker-item{display:flex;align-items:center;gap:2.6rem;padding-right:2.6rem;
-  font-family:var(--fd);font-size:.78rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--wfaint)}
-.ticker-item .sep{width:4px;height:4px;background:var(--red);border-radius:50%;flex-shrink:0;opacity:.75}
-
-/* ============ GOALS ============ */
-#goals{background:var(--bg)}
-.goals-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;
-  gap:2.5rem;margin-bottom:clamp(3rem,6vw,5rem)}
-.goals-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line2)}
-.goal{position:relative;overflow:hidden;height:clamp(420px,52vw,600px);display:flex;
-  flex-direction:column;justify-content:flex-end;padding:clamp(1.6rem,2.4vw,2.4rem);
-  background:var(--g1);transition:flex .8s var(--e1)}
-.goal-bg{position:absolute;inset:0;z-index:0}
-.goal-bg picture,.cta-bg picture,.about-frame picture{display:block;width:100%;height:100%}
-.goal-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.05);
-  transition:transform 1.3s var(--e1),filter 1.3s var(--e1);filter:grayscale(.3) brightness(1.05) contrast(1.06)}
-.goal::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:linear-gradient(to top,rgba(5,5,5,.95) 4%,rgba(5,5,5,.6) 46%,rgba(5,5,5,.22) 100%);
-  transition:opacity .9s var(--e2)}
-.goal-in{position:relative;z-index:2}
-.goal-num{font-family:var(--fd);font-size:.62rem;font-weight:600;letter-spacing:.3em;
-  color:var(--wfaint);margin-bottom:auto;position:absolute;top:0;left:0;z-index:2}
-.goal h3{font-size:clamp(1.35rem,2vw,1.85rem);margin-bottom:.7rem;transform:translateY(0);
-  transition:transform .75s var(--e1)}
-.goal p{font-size:.85rem;color:var(--wdim);font-weight:300;line-height:1.6;max-width:26ch;
-  transition:transform .75s var(--e1)}
-.goal-cta{display:flex;align-items:center;gap:.6rem;margin-top:1.4rem;font-family:var(--fd);
-  font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--red);
-  opacity:0;transform:translateY(14px);transition:opacity .6s var(--e1),transform .6s var(--e1)}
-.goal:hover .goal-bg img{transform:scale(1.13);filter:grayscale(0) brightness(1.32) contrast(1.1)}
-.goal:hover::after{opacity:.86}
-.goal:hover h3,.goal:hover p{transform:translateY(-10px)}
-.goal:hover .goal-cta{opacity:1;transform:translateY(-6px)}
-.goal-line{position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--red);z-index:3;
-  transform:scaleX(0);transform-origin:left;transition:transform .8s var(--e1)}
-.goal:hover .goal-line{transform:scaleX(1)}
-
-/* ============ STORY ============ */
-#story{background:var(--g1);position:relative;overflow:hidden}
-.story-glow{position:absolute;width:60vw;height:60vw;max-width:820px;max-height:820px;
-  right:-16vw;top:-14vw;border-radius:50%;pointer-events:none;
-  background:radial-gradient(circle,rgba(224,30,38,.10) 0%,rgba(224,30,38,0) 68%)}
-.story-in{position:relative;z-index:2}
-#storyTitle{margin-bottom:clamp(2.5rem,5vw,4rem);max-width:14ch}
-.story-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,5vw,4.5rem);align-items:start;max-width:1180px}
-.story-body p{font-size:clamp(1rem,1.28vw,1.14rem);color:var(--wdim);font-weight:300;line-height:1.82}
-.story-body p+p{margin-top:1.5rem}
-.story-mark{font-family:var(--fd);font-size:clamp(2.4rem,5.2vw,4.2rem);font-weight:800;line-height:.95;
-  color:transparent;-webkit-text-stroke:1px rgba(244,244,242,.16);letter-spacing:-.045em;
-  white-space:nowrap;padding-top:.15em}
-
-/* ============ HOW IT WORKS (horizontal pinned) ============ */
-#how{background:var(--bg);position:relative}
-#howPin{height:100vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
-.how-head{padding:0 clamp(1.25rem,5vw,4.5rem);margin-bottom:clamp(2rem,4vw,3.4rem);max-width:1440px;
-  margin-left:auto;margin-right:auto;width:100%}
-#howRail{display:flex;gap:2px;padding-left:max(calc((100vw - 1440px)/2 + 4.5rem),1.25rem);will-change:transform}
-.step{flex-shrink:0;width:min(420px,80vw);background:var(--g2);padding:clamp(2rem,3vw,2.8rem);
-  min-height:clamp(320px,40vh,384px);display:flex;flex-direction:column;position:relative;overflow:hidden;
-  transition:background .6s var(--e2)}
-.step::before{content:"";position:absolute;top:0;left:0;width:100%;height:1px;background:var(--line);}
-.step::after{content:"";position:absolute;top:0;left:0;width:0;height:1px;background:var(--red);
-  transition:width 1s var(--e1)}
-.step:hover{background:var(--g3)}
-.step:hover::after{width:100%}
-.step-num{font-family:var(--fd);font-size:clamp(3rem,4.4vw,4.4rem);font-weight:200;line-height:1;
-  color:transparent;-webkit-text-stroke:1px rgba(244,244,242,.22);margin-bottom:auto;letter-spacing:-.04em;
-  transition:-webkit-text-stroke-color .6s}
-.step:hover .step-num{-webkit-text-stroke-color:rgba(224,30,38,.65)}
-.step h3{font-size:clamp(1.2rem,1.7vw,1.5rem);margin:2.2rem 0 .9rem}
-.step p{font-size:.88rem;color:var(--wdim);font-weight:300;line-height:1.68}
-.how-hint{display:flex;align-items:center;gap:.8rem;margin-top:clamp(1.6rem,3vw,2.4rem);
-  padding:0 clamp(1.25rem,5vw,4.5rem);max-width:1440px;margin-left:auto;margin-right:auto;width:100%;
-  font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;color:var(--wfaint)}
-.how-hint .bar{flex:1;max-width:180px;height:1px;background:rgba(244,244,242,.13);position:relative}
-.how-hint .bar i{position:absolute;inset:0;width:0;background:var(--red);display:block}
-
-/* ============ ABOUT ============ */
-#about{background:var(--g1);overflow:hidden}
-.about-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(2.5rem,6vw,6rem);align-items:center}
-.about-media{position:relative}
-.about-frame{position:relative;overflow:hidden;background:var(--g2);aspect-ratio:1/1}
-.about-frame img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);
-  filter:grayscale(.22) contrast(1.04);transition:transform 1.4s var(--e1),filter 1.4s var(--e1)}
-.about-media:hover .about-frame img{transform:scale(1);filter:grayscale(0)}
-.about-frame::after{content:"";position:absolute;inset:0;pointer-events:none;
-  background:linear-gradient(to top,rgba(5,5,5,.5),transparent 55%);}
-.about-tag{position:absolute;left:0;bottom:-1px;background:var(--g1);padding:1.3rem 1.7rem 1.1rem 0;z-index:3}
-.about-tag b{display:block;font-family:var(--fd);font-size:clamp(1rem,1.4vw,1.2rem);font-weight:700;letter-spacing:-.02em}
-.about-tag span{display:flex;align-items:center;gap:.55rem;font-size:.6rem;letter-spacing:.24em;
-  text-transform:uppercase;color:var(--wfaint);margin-top:.4rem}
-.about-tag span img{height:13px;opacity:.62}
-.about-quote{font-family:var(--fd);font-size:clamp(1.35rem,2.5vw,2.15rem);font-weight:500;
-  letter-spacing:-.028em;line-height:1.3;margin:1.8rem 0 2rem;position:relative;padding-left:1.6rem}
-.about-quote::before{content:"";position:absolute;left:0;top:.35em;bottom:.2em;width:2px;background:var(--red)}
-.about-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line2);
-  margin:2.4rem 0;border-top:1px solid var(--line2);border-bottom:1px solid var(--line2)}
-.fact{background:var(--g1);padding:1.4rem 1.5rem 1.4rem 0}
-.fact b{display:block;font-family:var(--fd);font-size:.82rem;font-weight:700;margin-bottom:.3rem}
-.fact span{font-size:.78rem;color:var(--wdim);font-weight:300}
-
-/* ============ BENEFITS ============ */
-#benefits{background:var(--bg)}
-.ben-list{border-top:1px solid var(--line2)}
-.ben{display:grid;grid-template-columns:64px 1fr 1.15fr;gap:clamp(1rem,3vw,3rem);align-items:baseline;
-  padding:clamp(1.7rem,3vw,2.5rem) 0;border-bottom:1px solid var(--line2);position:relative;
-  transition:padding-left .6s var(--e1)}
-.ben::before{content:"";position:absolute;left:0;bottom:-1px;width:0;height:1px;background:var(--red);
-  transition:width .9s var(--e1)}
-.ben:hover{padding-left:1.1rem}
-.ben:hover::before{width:100%}
-.ben-n{font-family:var(--fd);font-size:.66rem;font-weight:600;letter-spacing:.24em;color:var(--wfaint);
-  transition:color .5s}
-.ben:hover .ben-n{color:var(--red)}
-.ben h3{font-size:clamp(1.15rem,1.9vw,1.65rem);letter-spacing:-.025em}
-.ben p{font-size:.9rem;color:var(--wdim);font-weight:300;line-height:1.68;max-width:48ch}
-
-/* ============ SIMULAÇÃO ============ */
-#sim{background:var(--g1);position:relative;overflow:hidden}
-.sim-glow{position:absolute;width:70vw;height:70vw;max-width:900px;max-height:900px;left:-20vw;bottom:-24vw;
-  border-radius:50%;pointer-events:none;background:radial-gradient(circle,rgba(224,30,38,.09) 0%,rgba(224,30,38,0) 66%)}
-.sim-grid{position:relative;z-index:2;display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2.5rem,6vw,5.5rem)}
-.sim-form{background:rgba(10,10,11,.5);border:1px solid var(--line2);padding:clamp(1.8rem,3.4vw,3rem);
-  backdrop-filter:blur(10px)}
-.fld{margin-bottom:2rem}
-.fld>label{display:block;font-family:var(--fd);font-size:.74rem;font-weight:600;letter-spacing:.02em;
-  margin-bottom:.95rem}
-.chips{display:flex;flex-wrap:wrap;gap:.55rem}
-.chip{position:relative}
-.chip input{position:absolute;opacity:0;width:0;height:0}
-.chip span{display:inline-flex;align-items:center;padding:.72rem 1.15rem;border:1px solid var(--line);
-  border-radius:2px;font-size:.79rem;color:var(--wdim);cursor:pointer;
-  transition:border-color .4s var(--e2),color .4s,background .4s}
-.chip:hover span{border-color:rgba(244,244,242,.3);color:var(--white)}
-.chip input:checked+span{border-color:var(--red);background:rgba(224,30,38,.09);color:var(--white)}
-.chip input:focus-visible+span{outline:2px solid var(--red);outline-offset:2px}
-.inp{width:100%;padding:.95rem 0;border-bottom:1px solid var(--line);font-size:.92rem;
-  color:var(--white);transition:border-color .4s var(--e2);background:transparent}
-.inp::placeholder{color:var(--wfaint)}
-.inp:focus{border-bottom-color:var(--red)}
-select.inp{cursor:pointer;-webkit-appearance:none;appearance:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239AA0A8' stroke-width='1.3'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;background-position:right .2rem center}
-select.inp option{background:#101013;color:var(--white)}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem}
-.sim-note{font-size:.72rem;color:var(--wfaint);font-weight:300;line-height:1.6;margin-top:1.3rem;max-width:52ch}
-.sim-side ul{list-style:none;margin-top:2.2rem;border-top:1px solid var(--line2)}
-.sim-side li{display:flex;gap:1rem;padding:1.15rem 0;border-bottom:1px solid var(--line2);
-  font-size:.87rem;color:var(--wdim);font-weight:300}
-.sim-side li b{font-family:var(--fd);font-size:.68rem;font-weight:600;letter-spacing:.2em;
-  color:var(--red);flex-shrink:0;padding-top:.18rem}
-
-/* ============ CTA CINEMATOGRÁFICO ============ */
-#cta{position:relative;overflow:hidden;min-height:clamp(560px,80vh,760px);display:flex;align-items:center;
-  padding:clamp(5rem,10vw,8rem) 0}
-#cta>.wrap{width:100%;flex:1 1 auto}
-.cta-bg{position:absolute;inset:-8% 0;z-index:0;will-change:transform}
-.cta-bg img{width:100%;height:100%;object-fit:cover;object-position:60% 30%;filter:grayscale(.55) brightness(.42)}
-.cta-ov{position:absolute;inset:0;z-index:1;
-  background:linear-gradient(to right,rgba(5,5,5,.96) 0%,rgba(5,5,5,.82) 42%,rgba(5,5,5,.55) 100%)}
-#ctaCanvas{position:absolute;inset:0;z-index:2;width:100%;height:100%;pointer-events:none;opacity:.65}
-.cta-in{position:relative;z-index:3;max-width:min(100%,660px)}
-.cta-in h2{margin-bottom:1.9rem;font-size:clamp(2rem,4.4vw,3.7rem);max-width:16ch}
-.cta-in h2 .dim{color:var(--wdim);font-weight:300}
-.cta-micro{display:flex;align-items:center;gap:.6rem;margin-top:1.6rem;font-size:.74rem;color:var(--wfaint);white-space:nowrap}
-.cta-micro svg{flex-shrink:0}
-
-/* ============ FAQ ============ */
-#faq{background:var(--bg)}
-.faq-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(2.5rem,6vw,5rem);align-items:start}
-.faq-list{border-top:1px solid var(--line2)}
-.fq{border-bottom:1px solid var(--line2)}
-.fq-q{width:100%;display:flex;align-items:flex-start;justify-content:space-between;gap:2rem;
-  padding:clamp(1.3rem,2.2vw,1.75rem) 0;text-align:left;cursor:pointer;
-  font-family:var(--fd);font-size:clamp(.95rem,1.4vw,1.12rem);font-weight:600;letter-spacing:-.015em;
-  transition:color .4s var(--e2)}
-.fq-q:hover{color:var(--red)}
-.fq-ic{position:relative;width:14px;height:14px;flex-shrink:0;margin-top:.32rem}
-.fq-ic::before,.fq-ic::after{content:"";position:absolute;background:var(--wdim);transition:transform .5s var(--e1),background .4s}
-.fq-ic::before{top:6.25px;left:0;width:14px;height:1.5px}
-.fq-ic::after{left:6.25px;top:0;width:1.5px;height:14px}
-.fq.open .fq-ic::after{transform:rotate(90deg) scaleX(0)}
-.fq.open .fq-ic::before{background:var(--red)}
-.fq-a{max-height:0;overflow:hidden;transition:max-height .7s var(--e1)}
-.fq-a p{font-size:.9rem;color:var(--wdim);font-weight:300;line-height:1.78;padding-bottom:1.6rem;max-width:66ch}
-.fq-a p+p{margin-top:.9rem}
-
-/* ============ FINAL CTA ============ */
-#final{background:var(--g1);text-align:center;position:relative;overflow:hidden}
-.final-glow{position:absolute;width:80vw;height:52vw;max-width:1100px;left:50%;top:50%;
-  transform:translate(-50%,-50%);pointer-events:none;
-  background:radial-gradient(ellipse,rgba(224,30,38,.12) 0%,rgba(224,30,38,0) 65%)}
-.final-in{position:relative;z-index:2;max-width:880px;margin:0 auto}
-.final-in h2{margin-bottom:1.5rem}
-.final-in .lead{margin:0 auto 2.8rem}
-
-/* ============ FOOTER ============ */
-footer{background:var(--bg);border-top:1px solid var(--line2);padding-top:clamp(3.5rem,6vw,5rem)}
-.f-top{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:clamp(2rem,5vw,4rem);
-  padding-bottom:clamp(3rem,5vw,4rem)}
-.f-brand img{height:52px;width:auto;margin-bottom:1.5rem;opacity:.85}
-.f-brand b{display:block;font-family:var(--fd);font-size:1.05rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.35rem}
-.f-brand span{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--wfaint)}
-.f-col h4{font-size:.62rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;
-  color:var(--wfaint);margin-bottom:1.3rem;font-family:var(--fb)}
-.f-col ul{list-style:none}
-.f-col li{margin-bottom:.75rem}
-.f-col a{font-size:.85rem;color:var(--wdim);transition:color .35s var(--e2)}
-.f-col a:hover{color:var(--white)}
-.f-wa{display:inline-flex;align-items:center;gap:.6rem;margin-top:.4rem;font-size:.85rem;color:var(--wa);
-  transition:opacity .35s}
-.f-wa:hover{opacity:.75}
-.f-disc{border-top:1px solid var(--line2);padding:2rem 0;font-size:.71rem;color:var(--wfaint);
-  font-weight:300;line-height:1.75;max-width:100ch}
-.f-bot{border-top:1px solid var(--line2);padding:1.5rem 0;display:flex;flex-wrap:wrap;gap:1rem;
-  align-items:center;justify-content:space-between;font-size:.71rem;color:var(--wfaint)}
-
-/* ============ WHATSAPP FLUTUANTE ============ */
-body.lock #waFloat{opacity:0;pointer-events:none}
-#waFloat{position:fixed;right:clamp(1rem,2.5vw,1.9rem);bottom:clamp(1rem,2.5vw,1.9rem);z-index:7900;
-  width:54px;height:54px;border-radius:50%;background:var(--wa);display:flex;align-items:center;
-  justify-content:center;box-shadow:0 8px 34px rgba(0,0,0,.45);opacity:0;transform:scale(.5);
-  transition:transform .5s var(--e3),opacity .5s var(--e2),box-shadow .4s}
-#waFloat.show{opacity:1;transform:scale(1)}
-#waFloat:hover{transform:scale(1.09);box-shadow:0 10px 40px rgba(37,211,102,.35)}
-#waFloat svg{width:27px;height:27px}
-
-/* ============ REVEAL BASE ============ */
-.rv{opacity:0;transform:translateY(26px)}
-.rv-b{opacity:0;filter:blur(9px);transform:translateY(20px)}
-.line-w{overflow:hidden;display:block}
-
-/* ============ RESPONSIVO ============ */
-@media (max-width:1180px){
-  .goals-grid{grid-template-columns:repeat(2,1fr)}
-  .goal{height:clamp(340px,44vw,420px)}
-  .about-grid{grid-template-columns:1fr;gap:3rem}
-  .about-media{max-width:460px}
-  .faq-grid{grid-template-columns:1fr;gap:2.5rem}
-  .sim-grid{grid-template-columns:1fr}
-  .story-body{grid-template-columns:1fr}
-  .f-top{grid-template-columns:1fr 1fr}
-}
-@media (max-width:900px){
-  .nav-links{display:none}
-  .nav-cta .btn-sm{display:none}
-  #menuBtn{display:block}
-  #howPin{height:auto;display:block;padding:0}
-  #howRail{flex-direction:column;gap:2px;padding-left:0;transform:none!important;
-    max-width:1440px;margin:0 auto;padding-left:clamp(1.25rem,5vw,4.5rem);padding-right:clamp(1.25rem,5vw,4.5rem)}
-  .step{width:100%;min-height:auto;padding:1.9rem 1.6rem}
-  .step h3{margin:1.4rem 0 .7rem}
-  .step-num{font-size:2.6rem}
-  .how-hint{display:none}
-  .ben{grid-template-columns:44px 1fr;row-gap:.6rem}
-  .ben p{grid-column:2/3}
-  .f-top{grid-template-columns:1fr;gap:2.5rem}
-}
-@media (max-width:680px){
-  :root{--nav-h:64px}
-  .goals-grid{grid-template-columns:1fr}
-  .goal{height:340px}
-  .goal .goal-cta{opacity:1;transform:translateY(0)}
-  .hero-media video,.hero-media img.poster{object-position:68% 26%}
-  .hero-content{padding-bottom:5.5rem}
-  .hero-actions{flex-direction:column;align-items:stretch}
-  .hero-actions .btn{width:100%;padding:1.15rem 1.5rem}
-  .hero-scroll .hero-badge{display:none}
-  .hero-eyebrow span:last-child{font-size:.56rem;letter-spacing:.24em}
-  .scroll-cue{font-size:.57rem;letter-spacing:.2em}
-  .two{grid-template-columns:1fr;gap:0}
-  .two .fld{margin-bottom:2rem}
-  .about-facts{grid-template-columns:1fr}
-  .fact{padding-right:0}
-  .btn-lg{padding:1.3rem 2rem;font-size:.86rem;width:100%}
-  .final-in .btn-lg{width:100%}
-  #cta{min-height:auto}
-  .cta-in{max-width:100%}
-}
-
-/* ============ ACESSIBILIDADE / MOVIMENTO ============ */
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;
-    transition-duration:.01ms!important;scroll-behavior:auto!important}
-  .rv,.rv-b{opacity:1!important;transform:none!important;filter:none!important}
-  #cd,#cr{display:none}
-  body.cur-on{cursor:auto}
-}
-</style>
+<link rel="prefetch" href="solucoes/">
+<link rel="prefetch" href="sobre/">
+<link rel="prefetch" href="duvidas/">
+<link rel="prefetch" href="simular/">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="preload" as="image" href="assets/hero-poster.jpg">
 </head>
-<body>
-
-<!-- Cursor -->
+<body data-page="home">
 <div id="cd" aria-hidden="true"></div>
 <div id="cr" aria-hidden="true"></div>
 <div id="progress" aria-hidden="true"></div>
 
-<!-- ============ LOADER ============ -->
 <div id="loader" role="status" aria-label="Carregando">
   <canvas id="ldCanvas" aria-hidden="true"></canvas>
   <div class="ld-in">
@@ -568,10 +47,9 @@ body.lock #waFloat{opacity:0;pointer-events:none}
   </div>
 </div>
 
-<!-- ============ NAV ============ -->
 <header id="nav">
   <div class="wrap">
-    <a href="#hero" class="brand" aria-label="Início">
+    <a href="" class="brand" aria-label="João Carlos Cunzolo Jr. — página inicial">
       <img src="assets/ademicon-mark.png" alt="Ademicon">
       <span class="brand-div" aria-hidden="true"></span>
       <span class="brand-txt">
@@ -580,12 +58,11 @@ body.lock #waFloat{opacity:0;pointer-events:none}
       </span>
     </a>
     <nav class="nav-links" aria-label="Navegação principal">
-      <a href="#hero">Início</a>
-      <a href="#goals">Consórcio</a>
-      <a href="#how">Como funciona</a>
-      <a href="#about">Sobre</a>
-      <a href="#sim">Simulação</a>
-      <a href="#faq">Dúvidas</a>
+      <a href="" data-nav="home">Início</a>
+      <a href="solucoes/" data-nav="solucoes">Soluções</a>
+      <a href="sobre/" data-nav="sobre">Sobre</a>
+      <a href="duvidas/" data-nav="duvidas">Dúvidas</a>
+      <a href="simular/" data-nav="simular">Simular</a>
     </nav>
     <div class="nav-cta">
       <a href="#" class="btn btn-sm wa-link" data-wa="nav"><span>Falar com João Carlos</span></a>
@@ -596,14 +73,12 @@ body.lock #waFloat{opacity:0;pointer-events:none}
   </div>
 </header>
 
-<!-- ============ MENU MOBILE ============ -->
 <div id="mobileMenu" aria-hidden="true">
-  <a class="ml" href="#hero"><i>01</i>Início</a>
-  <a class="ml" href="#goals"><i>02</i>Consórcio</a>
-  <a class="ml" href="#how"><i>03</i>Como funciona</a>
-  <a class="ml" href="#about"><i>04</i>Sobre</a>
-  <a class="ml" href="#sim"><i>05</i>Simulação</a>
-  <a class="ml" href="#faq"><i>06</i>Dúvidas</a>
+  <a class="ml" href="" data-nav="home"><i>01</i>Início</a>
+  <a class="ml" href="solucoes/" data-nav="solucoes"><i>02</i>Soluções</a>
+  <a class="ml" href="sobre/" data-nav="sobre"><i>03</i>Sobre</a>
+  <a class="ml" href="duvidas/" data-nav="duvidas"><i>04</i>Dúvidas</a>
+  <a class="ml" href="simular/" data-nav="simular"><i>05</i>Simular</a>
   <div class="mm-foot">
     <a href="#" class="btn btn-primary wa-link" data-wa="menu"><span>Falar com João Carlos <em class="ar">→</em></span></a>
   </div>
@@ -632,7 +107,7 @@ body.lock #waFloat{opacity:0;pointer-events:none}
       <p class="hero-sub">Consórcio para imóveis, veículos e outros projetos, com planejamento
         personalizado para transformar intenção em conquista.</p>
       <div class="hero-actions">
-        <a href="#sim" class="btn btn-primary"><span>Quero planejar meu objetivo <em class="ar">→</em></span></a>
+        <a href="simular/" class="btn btn-primary"><span>Quero planejar meu objetivo <em class="ar">→</em></span></a>
         <a href="#" class="btn btn-ghost wa-link" data-wa="hero"><span>Falar com João Carlos</span></a>
       </div>
     </div>
@@ -652,12 +127,9 @@ body.lock #waFloat{opacity:0;pointer-events:none}
   </div>
 </section>
 
-<!-- ============ TICKER ============ -->
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track" id="tickerTrack"></div>
-</div>
+<div class="ticker" aria-hidden="true"><div class="ticker-track" id="tickerTrack"></div></div>
 
-<!-- ============ GOALS ============ -->
+<!-- ============ OBJETIVOS ============ -->
 <section id="goals" class="sec" aria-labelledby="goalsTitle">
   <div class="wrap">
     <div class="goals-head">
@@ -671,68 +143,46 @@ body.lock #waFloat{opacity:0;pointer-events:none}
   </div>
   <div class="wrap">
     <div class="goals-grid">
-      <!-- Substituir as imagens de fundo (assets/goal-*.jpg) por fotos reais quando disponíveis -->
-      <a href="#sim" class="goal clk" data-goal="Imóvel">
+      <a href="solucoes/#imoveis" class="goal clk">
         <div class="goal-bg"><picture><source srcset="assets/goal-imoveis.webp" type="image/webp"><img src="assets/goal-imoveis.jpg" alt="" loading="lazy" decoding="async"></picture></div>
         <div class="goal-in">
           <div class="goal-num">01</div>
           <h3>Imóveis</h3>
           <p>Casa, apartamento, terreno ou patrimônio.</p>
-          <div class="goal-cta">Planejar <em class="ar">→</em></div>
+          <div class="goal-cta">Ver detalhes <em class="ar">→</em></div>
         </div>
         <span class="goal-line" aria-hidden="true"></span>
       </a>
-      <a href="#sim" class="goal clk" data-goal="Veículo">
+      <a href="solucoes/#veiculos" class="goal clk">
         <div class="goal-bg"><picture><source srcset="assets/goal-veiculos.webp" type="image/webp"><img src="assets/goal-veiculos.jpg" alt="" loading="lazy" decoding="async"></picture></div>
         <div class="goal-in">
           <div class="goal-num">02</div>
           <h3>Veículos</h3>
           <p>Carro, moto ou renovação do veículo.</p>
-          <div class="goal-cta">Planejar <em class="ar">→</em></div>
+          <div class="goal-cta">Ver detalhes <em class="ar">→</em></div>
         </div>
         <span class="goal-line" aria-hidden="true"></span>
       </a>
-      <a href="#sim" class="goal clk" data-goal="Negócio">
+      <a href="solucoes/#negocios" class="goal clk">
         <div class="goal-bg"><picture><source srcset="assets/goal-negocios.webp" type="image/webp"><img src="assets/goal-negocios.jpg" alt="" loading="lazy" decoding="async"></picture></div>
         <div class="goal-in">
           <div class="goal-num">03</div>
           <h3>Negócios</h3>
           <p>Estrutura, expansão ou novos projetos.</p>
-          <div class="goal-cta">Planejar <em class="ar">→</em></div>
+          <div class="goal-cta">Ver detalhes <em class="ar">→</em></div>
         </div>
         <span class="goal-line" aria-hidden="true"></span>
       </a>
-      <a href="#sim" class="goal clk" data-goal="Outro">
+      <a href="solucoes/#outros" class="goal clk">
         <div class="goal-bg"><picture><source srcset="assets/goal-outros.webp" type="image/webp"><img src="assets/goal-outros.jpg" alt="" loading="lazy" decoding="async"></picture></div>
         <div class="goal-in">
           <div class="goal-num">04</div>
           <h3>Outros objetivos</h3>
           <p>Planos personalizados de acordo com sua necessidade.</p>
-          <div class="goal-cta">Planejar <em class="ar">→</em></div>
+          <div class="goal-cta">Ver detalhes <em class="ar">→</em></div>
         </div>
         <span class="goal-line" aria-hidden="true"></span>
       </a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ STORY ============ -->
-<section id="story" class="sec" aria-labelledby="storyTitle">
-  <div class="story-glow" aria-hidden="true"></div>
-  <div class="wrap story-in">
-    <div class="ey rv">Filosofia</div>
-    <h2 id="storyTitle" class="h-lg rv-title">Não é sobre comprar. É sobre planejar.</h2>
-    <div class="story-body">
-      <div>
-        <p class="rv">Grandes conquistas raramente acontecem por acaso.</p>
-        <p class="rv">Elas começam quando você define um objetivo, entende suas possibilidades
-          e transforma esse objetivo em um plano.</p>
-        <p class="rv">O consórcio pode ser uma estratégia para quem deseja organizar uma aquisição
-          com planejamento e visão de longo prazo.</p>
-      </div>
-      <div class="rv">
-        <div class="story-mark">Objetivo<br>Plano<br>Conquista</div>
-      </div>
     </div>
   </div>
 </section>
@@ -745,31 +195,16 @@ body.lock #waFloat{opacity:0;pointer-events:none}
       <h2 id="howTitle" class="h-lg rv-title" style="max-width:14ch">Do objetivo ao patrimônio.</h2>
     </div>
     <div id="howRail">
-      <article class="step">
-        <div class="step-num">01</div>
-        <h3>Defina seu objetivo</h3>
-        <p>Entenda o que você deseja conquistar.</p>
-      </article>
-      <article class="step">
-        <div class="step-num">02</div>
-        <h3>Encontre o plano adequado</h3>
-        <p>Analise opções de crédito e condições de acordo com seu perfil.</p>
-      </article>
-      <article class="step">
-        <div class="step-num">03</div>
-        <h3>Faça seu planejamento</h3>
-        <p>Organize seu investimento dentro da sua estratégia financeira.</p>
-      </article>
-      <article class="step">
-        <div class="step-num">04</div>
-        <h3>Acompanhe sua jornada</h3>
-        <p>Conte com acompanhamento durante o processo.</p>
-      </article>
-      <article class="step">
-        <div class="step-num">05</div>
-        <h3>Realize seu objetivo</h3>
-        <p>Quando contemplado, utilize o crédito conforme as regras do grupo e do contrato.</p>
-      </article>
+      <article class="step"><div class="step-num">01</div><h3>Defina seu objetivo</h3>
+        <p>Entenda o que você deseja conquistar.</p></article>
+      <article class="step"><div class="step-num">02</div><h3>Encontre o plano adequado</h3>
+        <p>Analise opções de crédito e condições de acordo com seu perfil.</p></article>
+      <article class="step"><div class="step-num">03</div><h3>Faça seu planejamento</h3>
+        <p>Organize seu investimento dentro da sua estratégia financeira.</p></article>
+      <article class="step"><div class="step-num">04</div><h3>Acompanhe sua jornada</h3>
+        <p>Conte com acompanhamento durante o processo.</p></article>
+      <article class="step"><div class="step-num">05</div><h3>Realize seu objetivo</h3>
+        <p>Quando contemplado, utilize o crédito conforme as regras do grupo e do contrato.</p></article>
     </div>
     <div class="how-hint">
       <span>Role para avançar</span>
@@ -778,54 +213,20 @@ body.lock #waFloat{opacity:0;pointer-events:none}
   </div>
 </section>
 
-<!-- ============ SOBRE ============ -->
-<section id="about" class="sec" aria-labelledby="aboutTitle">
+<!-- ============ FAIXA DE AUTORIDADE ============ -->
+<section class="strip" aria-label="João Carlos Cunzolo Jr.">
   <div class="wrap">
-    <div class="about-grid">
-      <div class="about-media rv">
-        <div class="about-frame">
-          <picture><source srcset="assets/joao-carlos.webp" type="image/webp"><img src="assets/joao-carlos.jpg" alt="João Carlos Cunzolo Jr., representante Ademicon" loading="lazy" decoding="async" width="866" height="866"></picture>
-        </div>
-        <div class="about-tag">
-          <b>João Carlos Cunzolo Jr.</b>
-          <span><img src="assets/ademicon-mark.png" alt="">Representante Ademicon</span>
-        </div>
+    <div class="strip-in">
+      <div class="strip-ph rv">
+        <picture><source srcset="assets/joao-carlos.webp" type="image/webp">
+        <img src="assets/joao-carlos.jpg" alt="João Carlos Cunzolo Jr., representante Ademicon" loading="lazy" width="866" height="866"></picture>
       </div>
-      <div>
-        <div class="ey rv">Quem conduz seu plano</div>
-        <h2 id="aboutTitle" class="h-lg rv-title" style="max-width:15ch">Planejamento começa com confiança.</h2>
-        <blockquote class="about-quote rv">“Meu trabalho é entender onde você quer chegar e ajudar
-          a transformar esse objetivo em um planejamento possível.”</blockquote>
-        <!-- Espaço reservado: substituir por dados reais (experiência, região, especialidades) quando fornecidos -->
-        <div class="about-facts rv">
-          <div class="fact"><b>Atendimento consultivo</b><span>Conversa antes da proposta.</span></div>
-          <div class="fact"><b>Ademicon</b><span>Administradora de consórcios.</span></div>
-          <div class="fact"><b>Imóveis e veículos</b><span>Planos para diferentes objetivos.</span></div>
-          <div class="fact"><b>Acompanhamento</b><span>Suporte ao longo da jornada.</span></div>
-        </div>
-        <a href="#" class="btn btn-primary wa-link rv" data-wa="about"><span>Conversar com João Carlos <em class="ar">→</em></span></a>
+      <div class="strip-txt rv">
+        <q>Meu trabalho é entender onde você quer chegar e ajudar a transformar esse objetivo
+          em um planejamento possível.</q>
+        <cite><b>João Carlos Cunzolo Jr.</b> — Representante Ademicon</cite>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ BENEFÍCIOS ============ -->
-<section id="benefits" class="sec" aria-labelledby="benTitle">
-  <div class="wrap">
-    <div class="ey rv">Por que planejar</div>
-    <h2 id="benTitle" class="h-lg rv-title" style="max-width:18ch;margin-bottom:clamp(2.5rem,5vw,4rem)">
-      Planejamento para quem pensa além da compra.</h2>
-    <div class="ben-list">
-      <div class="ben rv"><span class="ben-n">01</span><h3>Planejamento financeiro</h3>
-        <p>Organize seu objetivo com visão de médio e longo prazo.</p></div>
-      <div class="ben rv"><span class="ben-n">02</span><h3>Flexibilidade</h3>
-        <p>Opções para diferentes objetivos e perfis.</p></div>
-      <div class="ben rv"><span class="ben-n">03</span><h3>Diversificação de objetivos</h3>
-        <p>Imóveis, veículos e outras possibilidades.</p></div>
-      <div class="ben rv"><span class="ben-n">04</span><h3>Acompanhamento consultivo</h3>
-        <p>Tenha orientação durante sua jornada.</p></div>
-      <div class="ben rv"><span class="ben-n">05</span><h3>Visão patrimonial</h3>
-        <p>Planeje conquistas importantes de forma estruturada.</p></div>
+      <a href="sobre/" class="btn btn-ghost rv"><span>Conhecer o trabalho <em class="ar">→</em></span></a>
     </div>
   </div>
 </section>
@@ -843,9 +244,10 @@ body.lock #waFloat{opacity:0;pointer-events:none}
           <li><b>02</b><span>João Carlos analisa as possibilidades para o seu perfil.</span></li>
           <li><b>03</b><span>Vocês conversam pelo WhatsApp, sem compromisso.</span></li>
         </ul>
+        <p class="lead rv" style="margin-top:2rem;font-size:.9rem">Ainda com dúvidas sobre como
+          o consórcio funciona? <a href="duvidas/" style="color:var(--white);text-decoration:underline;text-underline-offset:3px">Veja as perguntas frequentes</a>.</p>
       </div>
-
-      <form class="sim-form rv" id="simForm" novalidate>
+            <form class="sim-form rv" id="simForm" novalidate>
         <div class="fld">
           <label id="lblGoal">O que você deseja conquistar?</label>
           <div class="chips" role="radiogroup" aria-labelledby="lblGoal">
@@ -917,49 +319,6 @@ body.lock #waFloat{opacity:0;pointer-events:none}
   </div>
 </section>
 
-<!-- ============ FAQ ============ -->
-<section id="faq" class="sec" aria-labelledby="faqTitle">
-  <div class="wrap">
-    <div class="faq-grid">
-      <div>
-        <div class="ey rv">Dúvidas frequentes</div>
-        <h2 id="faqTitle" class="h-lg rv-title" style="max-width:12ch">Antes de decidir, entenda.</h2>
-        <p class="lead rv" style="margin-top:1.5rem">Ficou alguma dúvida que não está aqui?
-          Pergunte diretamente pelo WhatsApp.</p>
-        <a href="#" class="btn btn-ghost wa-link rv" data-wa="faq" style="margin-top:1.8rem"><span>Tirar uma dúvida</span></a>
-      </div>
-      <div class="faq-list" id="faqList">
-        <div class="fq"><button class="fq-q" aria-expanded="false">O que é um consórcio?<span class="fq-ic" aria-hidden="true"></span></button>
-          <div class="fq-a"><p>Consórcio é uma modalidade de compra programada, regulamentada pela Lei 11.795/2008 e fiscalizada pelo Banco Central. Um grupo de pessoas com um objetivo semelhante se reúne por meio de uma administradora e cada participante contribui mensalmente para formar um fundo comum. Periodicamente, em assembleias, participantes são contemplados e recebem uma carta de crédito para adquirir o bem previsto no contrato.</p></div></div>
-
-        <div class="fq"><button class="fq-q" aria-expanded="false">Posso utilizar consórcio para comprar um imóvel?<span class="fq-ic" aria-hidden="true"></span></button>
-          <div class="fq-a"><p>Sim. Existem grupos voltados a imóveis, que podem contemplar situações como casa, apartamento, terreno, construção ou reforma, conforme as regras do grupo e as condições previstas em contrato. O uso específico do crédito deve sempre ser verificado nas regras do plano escolhido.</p></div></div>
-
-        <div class="fq"><button class="fq-q" aria-expanded="false">Posso utilizar para comprar um carro ou moto?<span class="fq-ic" aria-hidden="true"></span></button>
-          <div class="fq-a"><p>Sim. Há grupos destinados a veículos, que podem incluir automóveis, motocicletas e, em alguns casos, veículos pesados. Cada grupo tem regras próprias sobre o tipo de bem, valores de crédito e prazos — vale conferir antes de contratar.</p></div></div>
-
-        <div class="fq"><button class="fq-q" aria-expanded="false">Como funciona a contemplação?<span class="fq-ic" aria-hidden="true"></span></button>
-          <div class="fq-a"><p>A contemplação acontece nas assembleias do grupo, por sorteio ou por lance, conforme as regras contratuais. Não existe data garantida: um participante pode ser contemplado no início, no meio ou próximo do fim do plano. Por isso o consórcio é indicado para quem consegue planejar a aquisição com prazo, e não para quem precisa do bem imediatamente.</p></div></div>
-
-        <div class="fq"><button class="fq-q" aria-expanded="false">Preciso dar entrada?<span class="fq-ic" aria-hidden="true"></span></button>
-          <div class="fq-a"><p>O consórcio não trabalha com entrada no formato de um financiamento. O participante contribui com parcelas mensais desde a adesão. Separadamente, existe a possibilidade de ofertar lance para antecipar a contemplação — o lance é opcional e segue as regras do grupo.</p></div></div>
-
-        <div class="fq"><button class="fq-q" aria-expanded="false">Posso escolher o valor do crédito?<span class="fq-ic" aria-hidden="true"></span></button>
-          <div class="fq-a"><p>Você escolhe entre as faixas de crédito disponíveis nos grupos abertos no momento da contratação. O valor do crédito influencia diretamente o valor da parcela e o prazo do plano. Na conversa, é possível avaliar qual faixa faz sentido para o seu objetivo e para o seu orçamento.</p></div></div>
-
-        <div class="fq"><button class="fq-q" aria-expanded="false">Como funciona o pagamento das parcelas?<span class="fq-ic" aria-hidden="true"></span></button>
-          <div class="fq-a"><p>As parcelas são mensais e compostas basicamente pelo fundo comum, pela taxa de administração e, quando previsto, pelo fundo de reserva e seguro. Os valores podem ser reajustados de acordo com o índice definido em contrato, para manter o poder de compra do crédito ao longo do plano.</p></div></div>
-
-        <div class="fq"><button class="fq-q" aria-expanded="false">Consórcio é financiamento?<span class="fq-ic" aria-hidden="true"></span></button>
-          <div class="fq-a"><p>Não. São produtos diferentes. No financiamento, você recebe o bem imediatamente e paga juros ao banco pelo empréstimo. No consórcio, não há incidência de juros — há taxa de administração — e a aquisição do bem ocorre após a contemplação. Em contrapartida, o financiamento oferece acesso imediato ao bem, e o consórcio exige planejamento e prazo.</p></div></div>
-
-        <div class="fq"><button class="fq-q" aria-expanded="false">Posso conversar com um especialista antes de decidir?<span class="fq-ic" aria-hidden="true"></span></button>
-          <div class="fq-a"><p>Sim, e é o recomendado. João Carlos, representante Ademicon, pode explicar as regras, apresentar as opções disponíveis e ajudar a avaliar se o consórcio faz sentido para o seu objetivo — sem compromisso de contratação. É só chamar pelo WhatsApp.</p></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ CTA FINAL ============ -->
 <section id="final" class="sec" aria-labelledby="finalTitle">
   <div class="final-glow" aria-hidden="true"></div>
@@ -973,7 +332,6 @@ body.lock #waFloat{opacity:0;pointer-events:none}
 </section>
 </main>
 
-<!-- ============ FOOTER ============ -->
 <footer>
   <div class="wrap">
     <div class="f-top">
@@ -990,18 +348,18 @@ body.lock #waFloat{opacity:0;pointer-events:none}
       <div class="f-col">
         <h4>Navegação</h4>
         <ul>
-          <li><a href="#hero">Início</a></li>
-          <li><a href="#goals">Soluções</a></li>
-          <li><a href="#how">Como funciona</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#sim">Contato</a></li>
+          <li><a href="">Início</a></li>
+          <li><a href="solucoes/">Soluções</a></li>
+          <li><a href="sobre/">Sobre</a></li>
+          <li><a href="duvidas/">Dúvidas frequentes</a></li>
+          <li><a href="simular/">Solicitar simulação</a></li>
         </ul>
       </div>
       <div class="f-col">
         <h4>Contato</h4>
         <ul>
           <li><a href="#" class="wa-link" data-wa="footer2" id="waDisplay">WhatsApp</a></li>
-          <li><a href="#sim">Solicitar simulação</a></li>
+          <li><a href="simular/">Solicitar simulação</a></li>
           <li><a href="https://www.ademicon.com.br" target="_blank" rel="noopener">Site Ademicon</a></li>
         </ul>
       </div>
@@ -1030,7 +388,7 @@ body.lock #waFloat{opacity:0;pointer-events:none}
   <svg viewBox="0 0 24 24" fill="#050505" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.48-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35z"/><path d="M12 2A10 10 0 002.2 14.6L2 22l7.6-2A10 10 0 1012 2zm0 18.2c-1.5 0-2.9-.4-4.1-1.1l-.3-.2-4.3 1.1 1.1-4.2-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>
 </a>
 
-<!-- Schema.org -->
+
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -1041,7 +399,8 @@ body.lock #waFloat{opacity:0;pointer-events:none}
       "name":"João Carlos Cunzolo Jr.",
       "jobTitle":"Representante Ademicon",
       "description":"Representante Ademicon especializado em consórcio para imóveis, veículos e outros objetivos patrimoniais.",
-      "image":"assets/joao-carlos.jpg",
+      "image":"https://joaocarloscunzolo.com.br/assets/joao-carlos.jpg",
+      "url":"https://joaocarloscunzolo.com.br/sobre/",
       "worksFor":{"@type":"Organization","name":"Ademicon Administradora de Consórcios S.A.","url":"https://www.ademicon.com.br"}
     },
     {
@@ -1054,587 +413,20 @@ body.lock #waFloat{opacity:0;pointer-events:none}
       "provider":{"@id":"https://joaocarloscunzolo.com.br/#pessoa"}
     },
     {
-      "@type":"FAQPage",
-      "mainEntity":[
-        {"@type":"Question","name":"O que é um consórcio?","acceptedAnswer":{"@type":"Answer","text":"Consórcio é uma modalidade de compra programada, regulamentada pela Lei 11.795/2008 e fiscalizada pelo Banco Central. Um grupo de pessoas contribui mensalmente para um fundo comum e, em assembleias, participantes são contemplados e recebem uma carta de crédito para adquirir o bem previsto no contrato."}},
-        {"@type":"Question","name":"Como funciona a contemplação?","acceptedAnswer":{"@type":"Answer","text":"A contemplação ocorre nas assembleias do grupo, por sorteio ou por lance, conforme as regras contratuais. Não existe data garantida de contemplação."}},
-        {"@type":"Question","name":"Consórcio é financiamento?","acceptedAnswer":{"@type":"Answer","text":"Não. No financiamento há incidência de juros e o bem é recebido imediatamente. No consórcio há taxa de administração e a aquisição ocorre após a contemplação."}},
-        {"@type":"Question","name":"Preciso dar entrada?","acceptedAnswer":{"@type":"Answer","text":"O consórcio não trabalha com entrada como um financiamento. O participante contribui com parcelas mensais desde a adesão, e o lance para antecipar a contemplação é opcional."}}
-      ]
+      "@type":"WebSite",
+      "@id":"https://joaocarloscunzolo.com.br/#site",
+      "url":"https://joaocarloscunzolo.com.br/",
+      "name":"João Carlos Cunzolo Jr. — Representante Ademicon",
+      "inLanguage":"pt-BR"
     }
   ]
 }
 </script>
 
-<!-- Bibliotecas hospedadas localmente: a página funciona sem depender de CDN externo -->
 <script src="assets/vendor/gsap.min.js"></script>
 <script src="assets/vendor/ScrollTrigger.min.js"></script>
 <script src="assets/vendor/lenis.min.js"></script>
 <script src="assets/vendor/split-type.umd.js"></script>
-<script>
-/* ==========================================================================
-   CONFIGURAÇÃO — edite aqui
-   ========================================================================== */
-var CONFIG = {
-  /* Número do WhatsApp no formato internacional, apenas dígitos:
-     55 (Brasil) + DDD + número. Ex.: 5511996050690 */
-  WHATSAPP_NUMBER: "5511996050690",
-  WHATSAPP_DISPLAY: "+55 11 99605-0690",
-  /* Mensagem padrão dos CTAs */
-  WHATSAPP_MESSAGE: "Olá, João Carlos! Vi sua página e gostaria de conversar sobre uma possibilidade de consórcio para meu objetivo."
-};
-
-/* ==========================================================================
-   WHATSAPP
-   ========================================================================== */
-function waURL(msg){
-  var n = String(CONFIG.WHATSAPP_NUMBER || "").replace(/\D/g,"");
-  var t = encodeURIComponent(msg || CONFIG.WHATSAPP_MESSAGE);
-  if(!n) return "#";
-  return "https://wa.me/" + n + "?text=" + t;
-}
-function initWhatsApp(){
-  var contextual = {
-    hero:  CONFIG.WHATSAPP_MESSAGE,
-    nav:   CONFIG.WHATSAPP_MESSAGE,
-    menu:  CONFIG.WHATSAPP_MESSAGE,
-    about: "Olá, João Carlos! Vi sua página e gostaria de conversar sobre planejamento com consórcio.",
-    cta:   "Olá, João Carlos! Tenho um objetivo em mente e gostaria de entender as possibilidades de consórcio.",
-    faq:   "Olá, João Carlos! Vi sua página e fiquei com uma dúvida sobre consórcio: ",
-    final: CONFIG.WHATSAPP_MESSAGE,
-    float: CONFIG.WHATSAPP_MESSAGE,
-    footer:CONFIG.WHATSAPP_MESSAGE,
-    footer2:CONFIG.WHATSAPP_MESSAGE
-  };
-  document.querySelectorAll(".wa-link").forEach(function(a){
-    var k = a.dataset.wa;
-    a.setAttribute("href", waURL(contextual[k] || CONFIG.WHATSAPP_MESSAGE));
-    a.setAttribute("target","_blank");
-    a.setAttribute("rel","noopener");
-  });
-  var d = document.getElementById("waDisplay");
-  if(d && CONFIG.WHATSAPP_DISPLAY) d.textContent = CONFIG.WHATSAPP_DISPLAY;
-}
-
-/* ==========================================================================
-   ESTADO GLOBAL
-   ========================================================================== */
-var lenis = null;
-var isMobile   = window.matchMedia("(max-width:900px)").matches;
-var isTouch    = window.matchMedia("(hover:none)").matches;
-var reduced    = window.matchMedia("(prefers-reduced-motion:reduce)").matches;
-
-/* ==========================================================================
-   LOADER
-   ========================================================================== */
-function loaderParticles(){
-  var cv = document.getElementById("ldCanvas"); if(!cv || reduced) return;
-  var ctx = cv.getContext("2d"), raf;
-  function resize(){ cv.width = cv.offsetWidth; cv.height = cv.offsetHeight; }
-  resize(); window.addEventListener("resize", resize, {passive:true});
-  var P = Array.from({length: isMobile?32:60}, function(){
-    return {x:Math.random()*cv.width, y:Math.random()*cv.height, r:Math.random()*1.3+.15,
-            vy:Math.random()*.32+.06, vx:(Math.random()-.5)*.14, a:Math.random()*.4+.05};
-  });
-  (function draw(){
-    ctx.clearRect(0,0,cv.width,cv.height);
-    P.forEach(function(p){
-      p.y -= p.vy; p.x += p.vx;
-      if(p.y < -6){ p.y = cv.height+6; p.x = Math.random()*cv.width; }
-      ctx.globalAlpha = p.a*.55;
-      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle = Math.random()>.82 ? "#E01E26" : "#F4F4F2";
-      ctx.fill();
-    });
-    raf = requestAnimationFrame(draw);
-  })();
-  window.__ldStop = function(){ cancelAnimationFrame(raf); };
-}
-
-function runLoader(done){
-  var ld = document.getElementById("loader");
-  if(reduced){ ld.style.display="none"; done(); return; }
-  loaderParticles();
-  var fill = ld.querySelector(".ld-fill"), pct = ld.querySelector(".ld-pct");
-  var obj = {v:0};
-  var tl = gsap.timeline({onComplete:function(){
-    if(window.__ldStop) window.__ldStop();
-    ld.style.display="none";
-    done();
-  }});
-  tl.to(ld.querySelector(".ld-mark"), {opacity:1, y:0, duration:.9, ease:"expo.out"}, 0)
-    .fromTo(ld.querySelector(".ld-mark"), {y:16, scale:.94}, {y:0, scale:1, duration:1.1, ease:"expo.out"}, 0)
-    .to(ld.querySelector(".ld-name"), {opacity:1, duration:.8, ease:"power2.out"}, .18)
-    .to(obj, {v:100, duration:1.5, ease:"power2.inOut", onUpdate:function(){
-        var v = Math.round(obj.v);
-        fill.style.width = v+"%";
-        pct.textContent = v+"%";
-      }}, .25)
-    .to(ld.querySelector(".ld-in"), {opacity:0, y:-18, duration:.6, ease:"power2.in"}, "+=.12")
-    .to(ld, {yPercent:-100, duration:1.05, ease:"expo.inOut"}, "-=.25");
-}
-
-/* ==========================================================================
-   SMOOTH SCROLL
-   ========================================================================== */
-function initSmooth(){
-  if(reduced || typeof Lenis === "undefined"){
-    document.documentElement.style.scrollBehavior = "smooth";
-    return;
-  }
-  lenis = new Lenis({
-    duration:1.3,
-    easing:function(t){ return Math.min(1, 1.001 - Math.pow(2,-10*t)); },
-    smoothWheel:true, wheelMultiplier:.9, touchMultiplier:1.6
-  });
-  lenis.on("scroll", ScrollTrigger.update);
-  gsap.ticker.add(function(t){ lenis.raf(t*1000); });
-  gsap.ticker.lagSmoothing(0);
-
-  document.querySelectorAll('a[href^="#"]').forEach(function(a){
-    a.addEventListener("click", function(e){
-      var href = a.getAttribute("href");
-      if(href === "#") return;
-      var t = document.querySelector(href);
-      if(!t) return;
-      e.preventDefault();
-      lenis.scrollTo(t, {offset:-70, duration:1.5});
-    });
-  });
-}
-
-/* ==========================================================================
-   CURSOR
-   ========================================================================== */
-function initCursor(){
-  if(isTouch || isMobile || reduced) return;
-  var dot = document.getElementById("cd"), ring = document.getElementById("cr");
-  var mx=innerWidth/2, my=innerHeight/2, rx=mx, ry=my;
-  document.body.classList.add("cur-on");
-  document.addEventListener("mousemove", function(e){
-    mx=e.clientX; my=e.clientY;
-    dot.style.transform = "translate("+mx+"px,"+my+"px) translate(-50%,-50%)";
-  }, {passive:true});
-  (function loop(){
-    rx += (mx-rx)*.11; ry += (my-ry)*.11;
-    ring.style.transform = "translate("+rx+"px,"+ry+"px) translate(-50%,-50%)";
-    requestAnimationFrame(loop);
-  })();
-  document.addEventListener("mouseover", function(e){
-    if(e.target.closest("a,button,.clk,input,select,label.chip")) document.body.classList.add("hl");
-  });
-  document.addEventListener("mouseout", function(e){
-    if(e.target.closest("a,button,.clk,input,select,label.chip")) document.body.classList.remove("hl");
-  });
-}
-
-/* ==========================================================================
-   BOTÕES MAGNÉTICOS
-   ========================================================================== */
-function initMagnetic(){
-  if(isTouch || isMobile || reduced) return;
-  document.querySelectorAll(".btn-primary,.btn-lg,#waFloat").forEach(function(btn){
-    btn.addEventListener("mousemove", function(e){
-      var r = btn.getBoundingClientRect();
-      gsap.to(btn, {x:(e.clientX-r.left-r.width/2)*.18, y:(e.clientY-r.top-r.height/2)*.28,
-                    duration:.55, ease:"power2.out"});
-    });
-    btn.addEventListener("mouseleave", function(){
-      gsap.to(btn, {x:0, y:0, duration:.8, ease:"elastic.out(1,.5)"});
-    });
-  });
-}
-
-/* ==========================================================================
-   HERO
-   ========================================================================== */
-function initHero(){
-  var h1 = document.getElementById("headline");
-  var tl = gsap.timeline({defaults:{ease:"expo.out"}});
-
-  if(typeof SplitType !== "undefined" && !reduced){
-    var sp = new SplitType(h1, {types:"lines,words,chars", lineClass:"ln"});
-    gsap.set(sp.chars, {yPercent:118, rotateX:-58, transformOrigin:"50% bottom", opacity:0});
-    tl.to(sp.chars, {yPercent:0, rotateX:0, opacity:1, duration:1.15,
-                     stagger:{amount:.6}, ease:"expo.out"}, .1);
-  } else {
-    gsap.set(h1,{opacity:0});
-    tl.to(h1,{opacity:1,duration:.9},.1);
-  }
-  tl.add(function(){ h1.classList.add("done"); }, .85)
-    .to(".hero-eyebrow", {opacity:1, y:0, duration:.9}, 0)
-    .fromTo(".hero-eyebrow", {y:14}, {y:0, duration:.9}, 0)
-    .to(".hero-sub", {opacity:1, y:0, duration:1}, .55)
-    .fromTo(".hero-sub", {y:22}, {y:0, duration:1}, .55)
-    .to(".hero-actions", {opacity:1, y:0, duration:1}, .72)
-    .fromTo(".hero-actions", {y:22}, {y:0, duration:1}, .72)
-    .to(".hero-scroll", {opacity:1, duration:1}, .95)
-    .fromTo(".hero-media", {scale:1.12, filter:"blur(9px)"},
-                           {scale:1, filter:"blur(0px)", duration:2, ease:"expo.out"}, 0);
-
-  /* Parallax do vídeo */
-  if(!reduced){
-    gsap.to(".hero-media", {
-      yPercent:14, ease:"none",
-      scrollTrigger:{trigger:"#hero", start:"top top", end:"bottom top", scrub:.6}
-    });
-    gsap.to(".hero-content", {
-      yPercent:-22, opacity:.15, ease:"none",
-      scrollTrigger:{trigger:"#hero", start:"top top", end:"bottom top", scrub:.6}
-    });
-  }
-
-  /* Pausa o vídeo quando fora da viewport (economia de recursos) */
-  var v = document.getElementById("heroVideo");
-  if(v){
-    v.play().catch(function(){});
-    if("IntersectionObserver" in window){
-      new IntersectionObserver(function(en){
-        en.forEach(function(e){ e.isIntersecting ? v.play().catch(function(){}) : v.pause(); });
-      }, {threshold:.05}).observe(document.getElementById("hero"));
-    }
-  }
-}
-
-/* ==========================================================================
-   TICKER
-   ========================================================================== */
-function initTicker(){
-  var track = document.getElementById("tickerTrack");
-  var words = ["Planejamento patrimonial","Imóveis","Veículos","Terrenos","Negócios",
-               "Consórcio Ademicon","Atendimento consultivo"];
-  function block(){
-    var d = document.createElement("div");
-    d.className = "ticker-item";
-    words.forEach(function(w){
-      var s = document.createElement("span"); s.textContent = w; d.appendChild(s);
-      var sep = document.createElement("i"); sep.className="sep"; d.appendChild(sep);
-    });
-    return d;
-  }
-  track.appendChild(block()); track.appendChild(block()); track.appendChild(block());
-  if(reduced) return;
-  var w = track.scrollWidth/3;
-  gsap.to(track, {x:-w, duration:26, ease:"none", repeat:-1});
-}
-
-/* ==========================================================================
-   NAV + MENU MOBILE
-   ========================================================================== */
-function initNav(){
-  var nav = document.getElementById("nav");
-  ScrollTrigger.create({start:"top -50", end:99999,
-    onUpdate:function(s){ nav.classList.toggle("on", s.scroll()>50); }});
-
-  var btn = document.getElementById("menuBtn"), menu = document.getElementById("mobileMenu"), open=false;
-  function toggle(force){
-    open = (typeof force==="boolean") ? force : !open;
-    btn.classList.toggle("x", open);
-    menu.classList.toggle("open", open);
-    menu.setAttribute("aria-hidden", String(!open));
-    btn.setAttribute("aria-expanded", String(open));
-    btn.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
-    document.body.classList.toggle("lock", open);
-    if(lenis){ open ? lenis.stop() : lenis.start(); }
-  }
-  btn.addEventListener("click", function(){ toggle(); });
-  menu.querySelectorAll("a").forEach(function(a){
-    a.addEventListener("click", function(){ if(open) toggle(false); });
-  });
-  document.addEventListener("keydown", function(e){ if(e.key==="Escape" && open) toggle(false); });
-}
-
-/* ==========================================================================
-   PROGRESS BAR + WHATSAPP FLUTUANTE
-   ========================================================================== */
-function initProgress(){
-  var bar = document.getElementById("progress"), wa = document.getElementById("waFloat");
-  ScrollTrigger.create({
-    start:"top top", end:"max",
-    onUpdate:function(s){
-      bar.style.width = (s.progress*100)+"%";
-      wa.classList.toggle("show", s.scroll() > innerHeight*.7);
-    }
-  });
-}
-
-/* ==========================================================================
-   REVEALS DE SCROLL
-   ========================================================================== */
-function initReveals(){
-  if(reduced) return;
-
-  /* Títulos com split por linha */
-  document.querySelectorAll(".rv-title").forEach(function(el){
-    if(typeof SplitType === "undefined"){
-      gsap.fromTo(el,{opacity:0,y:26},{opacity:1,y:0,duration:.9,ease:"expo.out",
-        scrollTrigger:{trigger:el,start:"top 88%"}});
-      return;
-    }
-    var sp = new SplitType(el, {types:"lines", lineClass:"ln"});
-    var inner = sp.lines.map(function(l){
-      var span = document.createElement("span");
-      span.style.display="block";
-      while(l.firstChild) span.appendChild(l.firstChild);
-      l.appendChild(span);
-      return span;
-    });
-    gsap.set(inner, {yPercent:112, opacity:0});
-    gsap.to(inner, {yPercent:0, opacity:1, duration:1.05, stagger:.075, ease:"expo.out",
-      scrollTrigger:{trigger:el, start:"top 87%"}});
-  });
-
-  /* Elementos genéricos */
-  gsap.utils.toArray(".rv").forEach(function(el,i){
-    gsap.to(el, {opacity:1, y:0, duration:.85, ease:"expo.out", delay:(i%4)*.05,
-      scrollTrigger:{trigger:el, start:"top 91%"}});
-  });
-
-  /* Goals: entrada em stagger com clip */
-  gsap.utils.toArray(".goal").forEach(function(el,i){
-    gsap.fromTo(el, {clipPath:"inset(100% 0 0 0)", y:34},
-                    {clipPath:"inset(0% 0 0 0)", y:0, duration:1.15, ease:"expo.out", delay:i*.09,
-                     scrollTrigger:{trigger:".goals-grid", start:"top 84%"}});
-  });
-
-  /* Benefícios: linhas */
-  gsap.utils.toArray(".ben").forEach(function(el,i){
-    gsap.fromTo(el,{opacity:0,x:-22},{opacity:1,x:0,duration:.85,ease:"expo.out",delay:i*.07,
-      scrollTrigger:{trigger:el,start:"top 90%"}});
-  });
-
-  /* Parallax do CTA */
-  gsap.to(".cta-bg", {yPercent:12, ease:"none",
-    scrollTrigger:{trigger:"#cta", start:"top bottom", end:"bottom top", scrub:.7}});
-
-  /* Story mark parallax sutil */
-  gsap.to(".story-mark", {yPercent:-14, ease:"none",
-    scrollTrigger:{trigger:"#story", start:"top bottom", end:"bottom top", scrub:.8}});
-}
-
-/* ==========================================================================
-   COMO FUNCIONA — SCROLL HORIZONTAL PINADO (desktop)
-   ========================================================================== */
-function initHorizontal(){
-  if(reduced || window.matchMedia("(max-width:900px)").matches) return;
-  var rail = document.getElementById("howRail");
-  var pin  = document.getElementById("howPin");
-  var sec  = document.getElementById("how");
-  var bar  = document.getElementById("howBar");
-  if(!rail || !pin || !sec) return;
-
-  function dist(){
-    return Math.max(0, rail.scrollWidth - window.innerWidth + parseFloat(getComputedStyle(rail).paddingLeft));
-  }
-  gsap.to(rail, {
-    x:function(){ return -dist(); },
-    ease:"none",
-    scrollTrigger:{
-      trigger:sec, start:"top top", end:function(){ return "+="+dist(); },
-      pin:pin, scrub:.6, anticipatePin:1, invalidateOnRefresh:true,
-      onUpdate:function(s){ if(bar) bar.style.width = (s.progress*100)+"%"; }
-    }
-  });
-
-  gsap.utils.toArray(".step").forEach(function(el,i){
-    gsap.fromTo(el, {opacity:.25, y:22}, {opacity:1, y:0, duration:.8, ease:"expo.out", delay:i*.06,
-      scrollTrigger:{trigger:sec, start:"top 70%"}});
-  });
-}
-
-/* ==========================================================================
-   FAQ
-   ========================================================================== */
-function initFAQ(){
-  document.querySelectorAll("#faqList .fq").forEach(function(fq){
-    var btn = fq.querySelector(".fq-q"), ans = fq.querySelector(".fq-a");
-    btn.addEventListener("click", function(){
-      var isOpen = fq.classList.contains("open");
-      document.querySelectorAll("#faqList .fq.open").forEach(function(o){
-        o.classList.remove("open");
-        o.querySelector(".fq-a").style.maxHeight = "0px";
-        o.querySelector(".fq-q").setAttribute("aria-expanded","false");
-      });
-      if(!isOpen){
-        fq.classList.add("open");
-        ans.style.maxHeight = ans.scrollHeight + "px";
-        btn.setAttribute("aria-expanded","true");
-        setTimeout(function(){ ScrollTrigger.refresh(); }, 720);
-      }
-    });
-  });
-  window.addEventListener("resize", function(){
-    var o = document.querySelector("#faqList .fq.open");
-    if(o) o.querySelector(".fq-a").style.maxHeight = o.querySelector(".fq-a").scrollHeight + "px";
-  }, {passive:true});
-}
-
-/* ==========================================================================
-   PARTÍCULAS DO CTA
-   ========================================================================== */
-function initCtaCanvas(){
-  var cv = document.getElementById("ctaCanvas"); if(!cv || reduced) return;
-  var ctx = cv.getContext("2d"), running = false, raf;
-  function resize(){ cv.width = cv.offsetWidth; cv.height = cv.offsetHeight; }
-  resize(); window.addEventListener("resize", resize, {passive:true});
-  var P = Array.from({length: isMobile?26:58}, function(){
-    return {x:Math.random()*1600, y:Math.random()*900, r:Math.random()*1.5+.2,
-            vy:Math.random()*.34+.07, vx:(Math.random()-.5)*.18, a:Math.random()*.42+.06};
-  });
-  function draw(){
-    ctx.clearRect(0,0,cv.width,cv.height);
-    P.forEach(function(p){
-      p.y -= p.vy; p.x += p.vx;
-      if(p.y < -8){ p.y = cv.height+8; p.x = Math.random()*cv.width; }
-      if(p.x < -8) p.x = cv.width+8; if(p.x > cv.width+8) p.x = -8;
-      ctx.globalAlpha = p.a*.5;
-      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle = Math.random()>.86 ? "#E01E26" : "#F4F4F2";
-      ctx.fill();
-    });
-    raf = requestAnimationFrame(draw);
-  }
-  /* Só anima quando a seção está visível */
-  if("IntersectionObserver" in window){
-    new IntersectionObserver(function(en){
-      en.forEach(function(e){
-        if(e.isIntersecting && !running){ running=true; draw(); }
-        else if(!e.isIntersecting && running){ running=false; cancelAnimationFrame(raf); }
-      });
-    }, {threshold:.02}).observe(document.getElementById("cta"));
-  } else { draw(); }
-}
-
-/* ==========================================================================
-   FORMULÁRIO DE QUALIFICAÇÃO → WHATSAPP
-   Não calcula valores. Apenas monta a mensagem e abre a conversa.
-   ========================================================================== */
-function initForm(){
-  var form = document.getElementById("simForm");
-  if(!form) return;
-
-  /* Pré-seleção ao clicar num objetivo na seção Goals */
-  document.querySelectorAll(".goal[data-goal]").forEach(function(g){
-    g.addEventListener("click", function(){
-      var v = g.dataset.goal;
-      var inp = form.querySelector('input[name="objetivo"][value="'+v+'"]');
-      if(inp){ inp.checked = true; }
-    });
-  });
-
-  form.addEventListener("submit", function(e){
-    e.preventDefault();
-    var d = new FormData(form);
-    var nome    = (d.get("nome")||"").toString().trim();
-    var cidade  = (d.get("cidade")||"").toString().trim();
-    var msg =
-      "Olá, João Carlos! Vi sua página e gostaria de receber uma simulação de consórcio.\n\n" +
-      "• Objetivo: " + d.get("objetivo") + "\n" +
-      "• Faixa de crédito: " + d.get("faixa") + "\n" +
-      "• Quando pretendo começar: " + d.get("prazo") +
-      (nome   ? "\n• Nome: " + nome : "") +
-      (cidade ? "\n• Cidade: " + cidade : "");
-    window.open(waURL(msg), "_blank", "noopener");
-  });
-}
-
-/* ==========================================================================
-   MISC
-   ========================================================================== */
-function initMisc(){
-  var y = document.getElementById("year");
-  if(y) y.textContent = new Date().getFullYear();
-}
-
-/* ==========================================================================
-   BOOT
-   ========================================================================== */
-function initPage(){
-  initHero();
-  initReveals();
-  initHorizontal();
-  initCursor();
-  initMagnetic();
-  initProgress();
-  ScrollTrigger.refresh();
-}
-
-/* Failsafe: se GSAP/ScrollTrigger não carregarem (rede, bloqueio, erro),
-   a página deve aparecer completa e utilizável — sem animação, mas sem quebrar. */
-function fallbackNoGSAP(){
-  var ld = document.getElementById("loader");
-  if(ld) ld.style.display = "none";
-  document.querySelectorAll(".rv,.rv-b").forEach(function(el){
-    el.style.opacity = "1"; el.style.transform = "none"; el.style.filter = "none";
-  });
-  ["#headline",".hero-eyebrow",".hero-sub",".hero-actions",".hero-scroll"].forEach(function(s){
-    var el = document.querySelector(s);
-    if(el){ el.style.opacity = "1"; el.style.transform = "none"; }
-  });
-  var h1 = document.getElementById("headline"); if(h1) h1.classList.add("done");
-  document.documentElement.style.scrollBehavior = "smooth";
-  var wa = document.getElementById("waFloat"); if(wa) wa.classList.add("show");
-  var v = document.getElementById("heroVideo"); if(v) v.play().catch(function(){});
-  initWhatsApp(); initMisc(); initFAQ(); initForm();
-  /* Nav adaptativa e menu mobile sem GSAP */
-  var nav = document.getElementById("nav");
-  window.addEventListener("scroll", function(){
-    nav.classList.toggle("on", window.scrollY > 50);
-  }, {passive:true});
-  var btn = document.getElementById("menuBtn"), menu = document.getElementById("mobileMenu"), open=false;
-  if(btn){
-    btn.addEventListener("click", function(){
-      open = !open;
-      btn.classList.toggle("x", open); menu.classList.toggle("open", open);
-      menu.setAttribute("aria-hidden", String(!open));
-      btn.setAttribute("aria-expanded", String(open));
-      document.body.classList.toggle("lock", open);
-    });
-    menu.querySelectorAll("a").forEach(function(a){
-      a.addEventListener("click", function(){ if(open) btn.click(); });
-    });
-  }
-}
-
-document.addEventListener("DOMContentLoaded", function(){
-  if(typeof gsap === "undefined" || typeof ScrollTrigger === "undefined"){
-    fallbackNoGSAP();
-    return;
-  }
-  gsap.registerPlugin(ScrollTrigger);
-  initWhatsApp();
-  initMisc();
-  initSmooth();
-  initNav();
-  initTicker();
-  initFAQ();
-  initForm();
-  initCtaCanvas();
-  /* Só divide/anima os textos depois das fontes carregarem:
-     evita quebras de linha calculadas com métricas da fonte de fallback */
-  var fontsReady = (document.fonts && document.fonts.ready)
-    ? document.fonts.ready : Promise.resolve();
-  var loaderDone = new Promise(function(res){ runLoader(res); });
-  Promise.all([fontsReady, loaderDone]).then(initPage);
-
-  /* Rede de segurança: se algo travar, garante que o loader saia */
-  setTimeout(function(){
-    var ld = document.getElementById("loader");
-    if(ld && ld.style.display !== "none" && getComputedStyle(ld).opacity !== "0"){
-      ld.style.display = "none";
-    }
-  }, 6000);
-});
-
-/* Recalcula em mudança de orientação/tamanho relevante */
-var lastW = window.innerWidth;
-window.addEventListener("resize", function(){
-  if(Math.abs(window.innerWidth-lastW) > 60){
-    lastW = window.innerWidth;
-    ScrollTrigger.refresh();
-  }
-}, {passive:true});
-</script>
-
+<script src="assets/site.js"></script>
 </body>
 </html>
