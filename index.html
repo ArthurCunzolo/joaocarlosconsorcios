@@ -357,9 +357,12 @@ body.lock #nav,body.lock #nav.on{background:transparent;backdrop-filter:none;
 .about-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(2.5rem,6vw,6rem);align-items:center}
 .about-media{position:relative}
 .about-frame{position:relative;overflow:hidden;background:var(--g2);aspect-ratio:1/1}
-.about-frame img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);
-  filter:grayscale(.22) contrast(1.04);transition:transform 1.4s var(--e1),filter 1.4s var(--e1)}
-.about-media:hover .about-frame img{transform:scale(1);filter:grayscale(0)}
+.about-frame img,.about-frame video{width:100%;height:100%;object-fit:cover;transform:scale(1.06);
+  filter:grayscale(.22) contrast(1.04);transition:transform 1.4s var(--e1),filter 1.4s var(--e1),opacity 1.2s var(--e2)}
+.about-media:hover .about-frame img,.about-media:hover .about-frame video{transform:scale(1);filter:grayscale(0)}
+/* mesmo mecanismo do Hero e do CTA: o vídeo entra por cima do poster com fade */
+.about-frame video{position:absolute;inset:0;opacity:0}
+.about-frame video.on{opacity:1}
 .about-frame::after{content:"";position:absolute;inset:0;pointer-events:none;
   background:linear-gradient(to top,rgba(5,5,5,.5),transparent 55%);}
 .about-tag{position:absolute;left:0;bottom:-1px;background:var(--g1);padding:1.3rem 1.7rem 1.1rem 0;z-index:3}
@@ -887,7 +890,11 @@ body.lock #waFloat{opacity:0;pointer-events:none}
     <div class="about-grid">
       <div class="about-media rv">
         <div class="about-frame">
-          <picture><source srcset="assets/joao-carlos.webp" type="image/webp"><img src="assets/joao-carlos.jpg" alt="João Carlos Cunzolo Jr., representante Ademicon" loading="lazy" decoding="async" width="866" height="866"></picture>
+          <picture><source srcset="assets/joao-carlos.webp" type="image/webp"><img src="assets/joao-carlos.jpg" alt="João Carlos Cunzolo Jr., representante Ademicon" loading="lazy" decoding="async" width="1000" height="1000"></picture>
+          <video id="aboutVideo" muted loop playsinline preload="none" aria-hidden="true">
+            <source src="assets/about-video.webm" type="video/webm">
+            <source src="assets/about-video.mp4" type="video/mp4">
+          </video>
         </div>
         <div class="about-tag">
           <b>João Carlos Cunzolo Jr.</b>
@@ -1594,6 +1601,7 @@ function initCtaCanvas(){
    ========================================================================== */
 function initCtaVideo(){
   iniciarVideoDeFundo(document.getElementById("ctaVideo"), document.getElementById("cta"));
+  iniciarVideoDeFundo(document.getElementById("aboutVideo"), document.getElementById("about"));
 }
 
 /* ==========================================================================
@@ -1667,8 +1675,10 @@ function fallbackNoGSAP(){
   var wa = document.getElementById("waFloat"); if(wa) wa.classList.add("show");
   var v = document.getElementById("heroVideo");
   if(v){ revelarVideo(v); v.play().catch(function(){}); }
-  var cv = document.getElementById("ctaVideo");
-  if(cv){ revelarVideo(cv); cv.play().catch(function(){}); }
+  ["ctaVideo","aboutVideo"].forEach(function(id){
+    var e = document.getElementById(id);
+    if(e){ revelarVideo(e); e.play().catch(function(){}); }
+  });
   initWhatsApp(); initMisc(); initFAQ(); initForm();
   /* Nav adaptativa e menu mobile sem GSAP */
   var nav = document.getElementById("nav");
