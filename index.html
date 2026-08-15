@@ -667,8 +667,7 @@ body.lock #waFloat{opacity:0;pointer-events:none}
 <section id="hero" aria-label="Apresentação">
   <div class="hero-media">
     <img class="poster" src="assets/hero-poster.jpg" alt="" aria-hidden="true">
-    <video id="heroVideo" poster="assets/hero-poster.jpg" autoplay muted loop playsinline preload="metadata"
-           aria-label="João Carlos Cunzolo Jr., representante Ademicon">
+    <video id="heroVideo" muted loop playsinline preload="none" aria-hidden="true">
       <source src="assets/hero.webm" type="video/webm">
       <source src="assets/hero.mp4" type="video/mp4">
     </video>
@@ -1291,11 +1290,21 @@ function initMagnetic(){
    então o estado atual também é verificado.
    ========================================================================== */
 function revelarVideo(v){
-  if(!v) return;
+  if(!v || v.__rev) return;
+  v.__rev = true;
   function mostrar(){ v.classList.add("on"); }
-  v.addEventListener("playing", mostrar);
-  v.addEventListener("timeupdate", mostrar, {once:true});
-  if(!v.paused && v.readyState > 2) mostrar();
+  ["playing","timeupdate","loadeddata","canplay"].forEach(function(ev){
+    v.addEventListener(ev, mostrar);
+  });
+  /* Rede de segurança: alguns navegadores não disparam os eventos acima na
+     ordem esperada. Verifica o estado real por alguns segundos e revela assim
+     que houver quadro decodificado. */
+  var tentativas = 0;
+  (function checar(){
+    if(v.classList.contains("on")) return;
+    if(v.readyState >= 2 && !v.paused){ mostrar(); return; }
+    if(++tentativas < 120) requestAnimationFrame(checar);
+  })();
 }
 
 /* ==========================================================================
@@ -1337,18 +1346,34 @@ function initHero(){
     });
   }
 
-  /* Pausa o vídeo quando fora da viewport (economia de recursos) */
-  var v = document.getElementById("heroVideo");
-  if(v){
-    if(reduced){ v.pause(); return; }   /* movimento reduzido: fica o poster */
+  /* O vídeo do Hero usa exatamente o mesmo mecanismo do CTA: sem o atributo
+     autoplay, quem manda tocar é o JS. Com autoplay o evento de início
+     disparava antes deste código rodar e o vídeo ficava tocando invisível. */
+  iniciarVideoDeFundo(document.getElementById("heroVideo"), document.getElementById("hero"));
+}
+
+/* ==========================================================================
+   VÍDEO DE FUNDO (Hero e CTA)
+   Toca quando a seção está à vista, pausa quando sai. As <source> ficam no
+   HTML com preload="none": nada é baixado antes do primeiro play.
+   ========================================================================== */
+function iniciarVideoDeFundo(v, sec){
+  if(!v || !sec || reduced) return;
+  var iniciado = false;
+  function tocar(){
+    iniciado = true;
     revelarVideo(v);
-    v.play().catch(function(){});
-    if("IntersectionObserver" in window){
-      new IntersectionObserver(function(en){
-        en.forEach(function(e){ e.isIntersecting ? v.play().catch(function(){}) : v.pause(); });
-      }, {threshold:.05}).observe(document.getElementById("hero"));
-    }
+    var pr = v.play();
+    if(pr && pr.catch) pr.catch(function(){ /* autoplay bloqueado: fica o poster */ });
   }
+  if("IntersectionObserver" in window){
+    new IntersectionObserver(function(en){
+      en.forEach(function(e){
+        if(e.isIntersecting) tocar();
+        else if(iniciado) v.pause();
+      });
+    }, {rootMargin:"200px 0px"}).observe(sec);
+  } else { tocar(); }
 }
 
 /* ==========================================================================
@@ -1568,28 +1593,7 @@ function initCtaCanvas(){
    quando sai dela. Se o autoplay for bloqueado, o frame estático fica no lugar.
    ========================================================================== */
 function initCtaVideo(){
-  var v = document.getElementById("ctaVideo");
-  var sec = document.getElementById("cta");
-  if(!v || !sec || reduced) return;
-
-  /* As <source> já estão no HTML com preload="none": nada é baixado até o
-     primeiro play(). Anexar <source> por JS depois não dispara o carregamento. */
-  var iniciado = false;
-  function tocar(){
-    iniciado = true;
-    var pr = v.play();
-    if(pr && pr.catch) pr.catch(function(){ /* autoplay bloqueado: fica o frame */ });
-  }
-  revelarVideo(v);
-
-  if("IntersectionObserver" in window){
-    new IntersectionObserver(function(en){
-      en.forEach(function(e){
-        if(e.isIntersecting) tocar();
-        else if(iniciado) v.pause();
-      });
-    }, {rootMargin:"200px 0px"}).observe(sec);
-  } else { tocar(); }
+  iniciarVideoDeFundo(document.getElementById("ctaVideo"), document.getElementById("cta"));
 }
 
 /* ==========================================================================
@@ -1663,6 +1667,8 @@ function fallbackNoGSAP(){
   var wa = document.getElementById("waFloat"); if(wa) wa.classList.add("show");
   var v = document.getElementById("heroVideo");
   if(v){ revelarVideo(v); v.play().catch(function(){}); }
+  var cv = document.getElementById("ctaVideo");
+  if(cv){ revelarVideo(cv); cv.play().catch(function(){}); }
   initWhatsApp(); initMisc(); initFAQ(); initForm();
   /* Nav adaptativa e menu mobile sem GSAP */
   var nav = document.getElementById("nav");
