@@ -299,20 +299,6 @@ body.lock #nav,body.lock #nav.on{background:transparent;backdrop-filter:none;
   transform:scaleX(0);transform-origin:left;transition:transform .8s var(--e1)}
 .goal:hover .goal-line{transform:scaleX(1)}
 
-/* ============ STORY ============ */
-#story{background:var(--g1);position:relative;overflow:hidden}
-.story-glow{position:absolute;width:60vw;height:60vw;max-width:820px;max-height:820px;
-  right:-16vw;top:-14vw;border-radius:50%;pointer-events:none;
-  background:radial-gradient(circle,rgba(224,30,38,.10) 0%,rgba(224,30,38,0) 68%)}
-.story-in{position:relative;z-index:2}
-#storyTitle{margin-bottom:clamp(2.5rem,5vw,4rem);max-width:14ch}
-.story-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,5vw,4.5rem);align-items:start;max-width:1180px}
-.story-body p{font-size:clamp(1rem,1.28vw,1.14rem);color:var(--wdim);font-weight:300;line-height:1.82}
-.story-body p+p{margin-top:1.5rem}
-.story-mark{font-family:var(--fd);font-size:clamp(2.4rem,5.2vw,4.2rem);font-weight:800;line-height:.95;
-  color:transparent;-webkit-text-stroke:1px rgba(244,244,242,.16);letter-spacing:-.045em;
-  white-space:nowrap;padding-top:.15em}
-
 /* ============ HOW IT WORKS (horizontal pinned) ============ */
 #how{background:var(--bg);position:relative}
 #howPin{height:100vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;position:relative}
@@ -563,7 +549,6 @@ body.lock #waFloat{opacity:0;pointer-events:none}
   .about-media{max-width:460px}
   .faq-grid{grid-template-columns:1fr;gap:2.5rem}
   .sim-grid{grid-template-columns:1fr}
-  .story-body{grid-template-columns:1fr}
   .f-top{grid-template-columns:1fr 1fr}
 }
 @media (max-width:900px){
@@ -780,28 +765,77 @@ body.lock #waFloat{opacity:0;pointer-events:none}
   </div>
 </section>
 
-<!-- ============ STORY ============ -->
-<section id="story" class="sec" aria-labelledby="storyTitle">
-  <div class="story-glow" aria-hidden="true"></div>
-  <div class="wrap story-in">
-    <div class="ey rv">Filosofia</div>
-    <h2 id="storyTitle" class="h-lg rv-title">Não é sobre comprar. É sobre planejar.</h2>
-    <div class="story-body">
-      <div>
-        <p class="rv">Grandes conquistas raramente acontecem por acaso.</p>
-        <p class="rv">Elas começam quando você define um objetivo, entende suas possibilidades
-          e transforma esse objetivo em um plano.</p>
-        <p class="rv">O consórcio pode ser uma estratégia para quem deseja organizar uma aquisição
-          com planejamento e visão de longo prazo.</p>
+<!-- ============ SIMULAÇÃO ============ -->
+<section id="sim" class="sec" aria-labelledby="simTitle">
+  <div class="sim-glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="sim-grid">
+      <div class="sim-side">
+        <div class="ey rv">Primeiro passo</div>
+        <h2 id="simTitle" class="h-lg rv-title" style="max-width:15ch">Vamos transformar seu objetivo em um plano?</h2>
+        <ul class="rv">
+          <li><b>01</b><span>Você conta o que deseja conquistar.</span></li>
+          <li><b>02</b><span>João Carlos analisa as possibilidades para o seu perfil.</span></li>
+          <li><b>03</b><span>Vocês conversam pelo WhatsApp, sem compromisso.</span></li>
+        </ul>
       </div>
-      <div class="rv">
-        <div class="story-mark">Objetivo<br>Plano<br>Conquista</div>
-      </div>
+
+      <form class="sim-form rv" id="simForm" novalidate>
+        <div class="fld">
+          <label id="lblGoal">O que você deseja conquistar?</label>
+          <div class="chips" role="radiogroup" aria-labelledby="lblGoal">
+            <label class="chip"><input type="radio" name="objetivo" value="Imóvel" checked><span>Imóvel</span></label>
+            <label class="chip"><input type="radio" name="objetivo" value="Veículo"><span>Veículo</span></label>
+            <label class="chip"><input type="radio" name="objetivo" value="Terreno"><span>Terreno</span></label>
+            <label class="chip"><input type="radio" name="objetivo" value="Negócio"><span>Negócio</span></label>
+            <label class="chip"><input type="radio" name="objetivo" value="Outro"><span>Outro</span></label>
+          </div>
+        </div>
+
+        <div class="fld">
+          <label for="faixa">Qual faixa de crédito você está buscando?</label>
+          <select class="inp" id="faixa" name="faixa">
+            <option value="Até R$ 100 mil">Até R$ 100 mil</option>
+            <option value="R$ 100 mil a R$ 200 mil">R$ 100 mil a R$ 200 mil</option>
+            <option value="R$ 200 mil a R$ 400 mil">R$ 200 mil a R$ 400 mil</option>
+            <option value="R$ 400 mil a R$ 700 mil">R$ 400 mil a R$ 700 mil</option>
+            <option value="Acima de R$ 700 mil">Acima de R$ 700 mil</option>
+            <option value="Ainda não sei">Ainda não sei</option>
+          </select>
+        </div>
+
+        <div class="two">
+          <div class="fld">
+            <label for="nome">Seu nome</label>
+            <input class="inp" type="text" id="nome" name="nome" placeholder="Como prefere ser chamado" autocomplete="name">
+          </div>
+          <div class="fld">
+            <label for="cidade">Sua cidade</label>
+            <input class="inp" type="text" id="cidade" name="cidade" placeholder="Cidade / UF" autocomplete="address-level2">
+          </div>
+        </div>
+
+        <div class="fld">
+          <label id="lblPrazo">Quando pretende começar?</label>
+          <div class="chips" role="radiogroup" aria-labelledby="lblPrazo">
+            <label class="chip"><input type="radio" name="prazo" value="O quanto antes" checked><span>O quanto antes</span></label>
+            <label class="chip"><input type="radio" name="prazo" value="Nos próximos meses"><span>Nos próximos meses</span></label>
+            <label class="chip"><input type="radio" name="prazo" value="Só estudando"><span>Só estudando</span></label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-lg" style="width:100%">
+          <span>Quero receber uma simulação <em class="ar">→</em></span>
+        </button>
+        <p class="sim-note">Ao enviar, o WhatsApp abre com suas respostas já preenchidas na mensagem
+          para João Carlos. Nenhum valor, parcela ou condição é calculado automaticamente nesta página —
+          a simulação é elaborada no atendimento, de acordo com os planos disponíveis.</p>
+      </form>
     </div>
   </div>
 </section>
 
-<!-- ============ COMO FUNCIONA ============ -->
+<!-- ============ CTA CINEMATOGRÁFICO ============ -->
 <section id="how" aria-labelledby="howTitle">
   <div id="howPin">
     <div id="howBgWrap" aria-hidden="true"><div id="howBg"></div></div>
@@ -895,77 +929,6 @@ body.lock #waFloat{opacity:0;pointer-events:none}
   </div>
 </section>
 
-<!-- ============ SIMULAÇÃO ============ -->
-<section id="sim" class="sec" aria-labelledby="simTitle">
-  <div class="sim-glow" aria-hidden="true"></div>
-  <div class="wrap">
-    <div class="sim-grid">
-      <div class="sim-side">
-        <div class="ey rv">Primeiro passo</div>
-        <h2 id="simTitle" class="h-lg rv-title" style="max-width:15ch">Vamos transformar seu objetivo em um plano?</h2>
-        <ul class="rv">
-          <li><b>01</b><span>Você conta o que deseja conquistar.</span></li>
-          <li><b>02</b><span>João Carlos analisa as possibilidades para o seu perfil.</span></li>
-          <li><b>03</b><span>Vocês conversam pelo WhatsApp, sem compromisso.</span></li>
-        </ul>
-      </div>
-
-      <form class="sim-form rv" id="simForm" novalidate>
-        <div class="fld">
-          <label id="lblGoal">O que você deseja conquistar?</label>
-          <div class="chips" role="radiogroup" aria-labelledby="lblGoal">
-            <label class="chip"><input type="radio" name="objetivo" value="Imóvel" checked><span>Imóvel</span></label>
-            <label class="chip"><input type="radio" name="objetivo" value="Veículo"><span>Veículo</span></label>
-            <label class="chip"><input type="radio" name="objetivo" value="Terreno"><span>Terreno</span></label>
-            <label class="chip"><input type="radio" name="objetivo" value="Negócio"><span>Negócio</span></label>
-            <label class="chip"><input type="radio" name="objetivo" value="Outro"><span>Outro</span></label>
-          </div>
-        </div>
-
-        <div class="fld">
-          <label for="faixa">Qual faixa de crédito você está buscando?</label>
-          <select class="inp" id="faixa" name="faixa">
-            <option value="Até R$ 100 mil">Até R$ 100 mil</option>
-            <option value="R$ 100 mil a R$ 200 mil">R$ 100 mil a R$ 200 mil</option>
-            <option value="R$ 200 mil a R$ 400 mil">R$ 200 mil a R$ 400 mil</option>
-            <option value="R$ 400 mil a R$ 700 mil">R$ 400 mil a R$ 700 mil</option>
-            <option value="Acima de R$ 700 mil">Acima de R$ 700 mil</option>
-            <option value="Ainda não sei">Ainda não sei</option>
-          </select>
-        </div>
-
-        <div class="two">
-          <div class="fld">
-            <label for="nome">Seu nome</label>
-            <input class="inp" type="text" id="nome" name="nome" placeholder="Como prefere ser chamado" autocomplete="name">
-          </div>
-          <div class="fld">
-            <label for="cidade">Sua cidade</label>
-            <input class="inp" type="text" id="cidade" name="cidade" placeholder="Cidade / UF" autocomplete="address-level2">
-          </div>
-        </div>
-
-        <div class="fld">
-          <label id="lblPrazo">Quando pretende começar?</label>
-          <div class="chips" role="radiogroup" aria-labelledby="lblPrazo">
-            <label class="chip"><input type="radio" name="prazo" value="O quanto antes" checked><span>O quanto antes</span></label>
-            <label class="chip"><input type="radio" name="prazo" value="Nos próximos meses"><span>Nos próximos meses</span></label>
-            <label class="chip"><input type="radio" name="prazo" value="Só estudando"><span>Só estudando</span></label>
-          </div>
-        </div>
-
-        <button type="submit" class="btn btn-lg" style="width:100%">
-          <span>Quero receber uma simulação <em class="ar">→</em></span>
-        </button>
-        <p class="sim-note">Ao enviar, o WhatsApp abre com suas respostas já preenchidas na mensagem
-          para João Carlos. Nenhum valor, parcela ou condição é calculado automaticamente nesta página —
-          a simulação é elaborada no atendimento, de acordo com os planos disponíveis.</p>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CTA CINEMATOGRÁFICO ============ -->
 <section id="cta" aria-labelledby="ctaTitle">
   <div class="cta-bg">
     <picture><source srcset="assets/cta-frame.webp" type="image/webp"><img src="assets/cta-frame.jpg" alt="" loading="lazy" decoding="async"></picture>
@@ -1477,10 +1440,6 @@ function initReveals(){
   /* Parallax do CTA */
   gsap.to(".cta-bg", {yPercent:12, ease:"none",
     scrollTrigger:{trigger:"#cta", start:"top bottom", end:"bottom top", scrub:.7}});
-
-  /* Story mark parallax sutil */
-  gsap.to(".story-mark", {yPercent:-14, ease:"none",
-    scrollTrigger:{trigger:"#story", start:"top bottom", end:"bottom top", scrub:.8}});
 }
 
 /* ==========================================================================
