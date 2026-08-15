@@ -225,6 +225,11 @@ body.lock #nav,body.lock #nav.on{background:transparent;backdrop-filter:none;
 .hero-media{position:absolute;inset:-6% 0 -6% 0;z-index:0;will-change:transform}
 .hero-media video,.hero-media img.poster{width:100%;height:100%;object-fit:cover;object-position:62% 28%}
 .hero-media img.poster{position:absolute;inset:0}
+/* o vídeo precisa ser posicionado também, senão o poster (que é absolute)
+   pinta por cima dele e o Hero fica parado. Ele entra por cima, com fade,
+   só quando começa a tocar de fato — se falhar, o poster permanece. */
+.hero-media video{position:absolute;inset:0;opacity:0;transition:opacity 1.2s var(--e2)}
+.hero-media video.on{opacity:1}
 .hero-ov{position:absolute;inset:0;z-index:1;pointer-events:none;
   background:
     linear-gradient(to top,rgba(5,5,5,.97) 0%,rgba(5,5,5,.72) 26%,rgba(5,5,5,.28) 52%,rgba(5,5,5,.42) 80%,rgba(5,5,5,.72) 100%),
@@ -1280,6 +1285,20 @@ function initMagnetic(){
 }
 
 /* ==========================================================================
+   REVELAR VÍDEO DE FUNDO
+   O poster fica embaixo e o vídeo entra por cima com fade. Não basta escutar
+   "playing": com autoplay o evento costuma disparar antes deste código rodar,
+   então o estado atual também é verificado.
+   ========================================================================== */
+function revelarVideo(v){
+  if(!v) return;
+  function mostrar(){ v.classList.add("on"); }
+  v.addEventListener("playing", mostrar);
+  v.addEventListener("timeupdate", mostrar, {once:true});
+  if(!v.paused && v.readyState > 2) mostrar();
+}
+
+/* ==========================================================================
    HERO
    ========================================================================== */
 function initHero(){
@@ -1321,6 +1340,8 @@ function initHero(){
   /* Pausa o vídeo quando fora da viewport (economia de recursos) */
   var v = document.getElementById("heroVideo");
   if(v){
+    if(reduced){ v.pause(); return; }   /* movimento reduzido: fica o poster */
+    revelarVideo(v);
     v.play().catch(function(){});
     if("IntersectionObserver" in window){
       new IntersectionObserver(function(en){
@@ -1559,7 +1580,7 @@ function initCtaVideo(){
     var pr = v.play();
     if(pr && pr.catch) pr.catch(function(){ /* autoplay bloqueado: fica o frame */ });
   }
-  v.addEventListener("playing", function(){ v.classList.add("on"); });
+  revelarVideo(v);
 
   if("IntersectionObserver" in window){
     new IntersectionObserver(function(en){
@@ -1640,7 +1661,8 @@ function fallbackNoGSAP(){
   var h1 = document.getElementById("headline"); if(h1) h1.classList.add("done");
   document.documentElement.style.scrollBehavior = "smooth";
   var wa = document.getElementById("waFloat"); if(wa) wa.classList.add("show");
-  var v = document.getElementById("heroVideo"); if(v) v.play().catch(function(){});
+  var v = document.getElementById("heroVideo");
+  if(v){ revelarVideo(v); v.play().catch(function(){}); }
   initWhatsApp(); initMisc(); initFAQ(); initForm();
   /* Nav adaptativa e menu mobile sem GSAP */
   var nav = document.getElementById("nav");
