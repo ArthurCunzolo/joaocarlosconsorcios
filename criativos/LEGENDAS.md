@@ -1,6 +1,6 @@
 # Criativos Instagram — João Carlos Cunzolo Jr. (Ademicon)
 
-Feed: 1080×1350 (4:5) · Stories: 1080×1920 (9:16, com margem segura para a interface do Instagram).
+Feed e carrossel: 1080×1350 (4:5) · Stories: 1080×1920 (9:16, com margem segura para a interface do Instagram).
 Para editar: altere o HTML em `_src/` e rode `NODE_PATH=$(npm root -g) node render.cjs` dentro de `_src/`.
 
 | # | Arquivo | Gancho | Objetivo |
@@ -53,3 +53,27 @@ Me manda "SONHO" no direct ou chama no WhatsApp (11) 99605-0690 💬
 > Conferir com a Ademicon as regras do consórcio de serviços (procedimentos elegíveis e exigência de nota fiscal do prestador) antes de publicar.
 
 **09 / 10** → mesmas legendas do 07 / 08. Foto da modelo gerada por IA (Gemini).
+
+---
+
+# Lote 2 (foto real na Ademicon)
+
+| # | Arquivo | Gancho | Objetivo |
+|---|---------|--------|----------|
+| 11 | feed/11-feed-aqui-nao-tem-robo.png | "Aqui não tem robô." | Humanização / confiança |
+| 12 | stories/12-story-caixinha-perguntas.png | "Me pergunta qualquer coisa sobre consórcio." | Engajamento (caixinha) |
+| 13 | carrossel/13-carrossel-1…6.png | "Consórcio em 4 passos" (6 slides) | Educação + salvamentos → WhatsApp |
+
+**11 — Aqui não tem robô**
+Aqui não tem robô, nem atendimento automático. Tem eu, cuidando do seu plano do primeiro papo até a contemplação. 🤝
+Me chama no WhatsApp (11) 99605-0690 ou manda um direct.
+#ademicon #consorcio #atendimentohumanizado #planejamentofinanceiro
+
+**12 — Story caixinha** → colar a figurinha "Caixinha de perguntas" logo abaixo dos exemplos (área do "Manda sua pergunta"). Responder as perguntas em stories seguintes gera muito engajamento.
+
+**13 — Carrossel "Consórcio em 4 passos"** (postar os 6 slides na ordem)
+Consórcio parece complicado, mas cabe em 4 passos:
+1️⃣ Escolha sua carta · 2️⃣ Pague sem juros · 3️⃣ Seja contemplado · 4️⃣ Compre à vista.
+Salva esse post pra consultar depois e me conta nos comentários: qual é o seu passo 1? 👇
+📲 (11) 99605-0690
+#consorcio #ademicon #educacaofinanceira #cartadecredito #semjuros
