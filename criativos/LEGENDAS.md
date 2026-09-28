@@ -12,6 +12,8 @@ Para editar: altere o HTML em `_src/` e rode `NODE_PATH=$(npm root -g) node rend
 | 05 | feed/05-feed-prazer-joao-carlos.png | "Prazer, João Carlos." | Autoridade / fixar no perfil |
 | 06 | stories/06-story-financiamento-vs-consorcio.png | Financiamento ou consórcio? | Educação → simulação |
 | 07 | feed/07-feed-realize-seu-sonho.png | "Realize o seu sonho." (público feminino) | Conversão (consórcio de serviços) |
+| 09 | feed/09-feed-realize-seu-sonho-foto.png | Versão do 07 com foto (IA/Gemini) | Conversão (consórcio de serviços) |
+| 10 | stories/10-story-sonho-adiado-foto.png | Versão do 08 com foto (IA/Gemini) | Engajamento → direct "SONHO" |
 | 08 | stories/08-story-sonho-adiado.png | "Aquele sonho que você vive adiando…" (público feminino) | Engajamento → direct "SONHO" |
 
 ## Legendas sugeridas
@@ -49,3 +51,5 @@ Me manda "SONHO" no direct ou chama no WhatsApp (11) 99605-0690 💬
 **08 — Story sonho adiado** → figurinha de caixa de perguntas ou link para o WhatsApp sobre "Responda aqui".
 
 > Conferir com a Ademicon as regras do consórcio de serviços (procedimentos elegíveis e exigência de nota fiscal do prestador) antes de publicar.
+
+**09 / 10** → mesmas legendas do 07 / 08. Foto da modelo gerada por IA (Gemini).
