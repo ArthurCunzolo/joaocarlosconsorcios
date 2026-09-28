@@ -11,6 +11,8 @@ Para editar: altere o HTML em `_src/` e rode `NODE_PATH=$(npm root -g) node rend
 | 04 | stories/04-story-mito-verdade.png | Mito x Verdade: lance | Educação → direct |
 | 05 | feed/05-feed-prazer-joao-carlos.png | "Prazer, João Carlos." | Autoridade / fixar no perfil |
 | 06 | stories/06-story-financiamento-vs-consorcio.png | Financiamento ou consórcio? | Educação → simulação |
+| 07 | feed/07-feed-realize-seu-sonho.png | "Realize o seu sonho." (público feminino) | Conversão (consórcio de serviços) |
+| 08 | stories/08-story-sonho-adiado.png | "Aquele sonho que você vive adiando…" (público feminino) | Engajamento → direct "SONHO" |
 
 ## Legendas sugeridas
 
@@ -37,3 +39,13 @@ Meu trabalho é montar com você o caminho mais inteligente pro seu próximo obj
 #ademicon #consorcio #consultorfinanceiro
 
 **06 — Story comparativo** → figurinha de link para o WhatsApp abaixo do texto final.
+
+**07 — Realize o seu sonho (público feminino)**
+Aquela cirurgia que você sempre quis, a prótese de silicone, o procedimento que você vive adiando… é a sua vez. ✨
+Com o consórcio de serviços Ademicon, a carta de crédito pode ser usada em cirurgia plástica e procedimentos estéticos — sem juros, no seu tempo, com a clínica e o profissional que você escolher.
+Me manda "SONHO" no direct ou chama no WhatsApp (11) 99605-0690 💬
+#consorcio #ademicon #cirurgiaplastica #silicone #autoestima #realizeseusonho
+
+**08 — Story sonho adiado** → figurinha de caixa de perguntas ou link para o WhatsApp sobre "Responda aqui".
+
+> Conferir com a Ademicon as regras do consórcio de serviços (procedimentos elegíveis e exigência de nota fiscal do prestador) antes de publicar.
