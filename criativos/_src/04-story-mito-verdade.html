@@ -1,0 +1,41 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.canvas{background:var(--ink);color:#fff}
+.half{left:0;right:0;top:0;height:960px;background:var(--off);color:var(--ink)}
+.half2{left:0;right:0;top:960px;bottom:0;background:linear-gradient(170deg,var(--red) 0%,var(--red-deep) 60%,var(--red-dark) 100%)}
+.label{font-family:var(--display);font-size:64px;letter-spacing:.04em;display:inline-flex;align-items:center;gap:18px;padding:10px 30px 14px;border-radius:999px}
+.mito{left:80px;top:290px}
+.mito .label{background:var(--ink);color:#fff}
+.mito .label i{width:42px;height:42px;border-radius:50%;background:var(--red);display:inline-grid;place-items:center;font-style:normal;font-family:var(--sans);font-weight:900;font-size:30px}
+.q{left:80px;right:80px;top:440px;font-family:var(--display);font-size:104px;line-height:1.1;text-decoration:line-through;text-decoration-color:var(--red);text-decoration-thickness:7px;text-transform:uppercase;color:#1c1c1f}
+.q .sx{position:relative;display:inline}
+.qx{left:60px;right:60px;top:660px;height:14px;background:var(--red);transform:rotate(-6deg);border-radius:8px;opacity:.95}
+.qx2{left:60px;right:60px;top:780px;height:14px;background:var(--red);transform:rotate(-6deg);border-radius:8px;opacity:.95}
+.verd{left:80px;top:1040px}
+.verd .label{background:#fff;color:var(--red)}
+.verd .label i{width:42px;height:42px;border-radius:50%;background:var(--red);color:#fff;display:inline-grid;place-items:center;font-style:normal;font-family:var(--sans);font-weight:900;font-size:28px}
+.a{left:80px;right:80px;top:1170px;font-size:52px;line-height:1.14;font-weight:800;letter-spacing:-.025em}
+.a .serif{font-size:62px;font-weight:400}
+.a2{left:80px;width:500px;top:1430px;font-size:32px;line-height:1.35;font-weight:500;color:#ffe3e4}
+.cta2{left:80px;top:1610px;display:inline-flex;align-items:center;gap:18px;background:#fff;color:var(--red);font-weight:800;font-size:34px;padding:24px 36px;border-radius:999px;box-shadow:0 20px 40px -14px rgba(0,0,0,.45)}
+.cta2 svg{width:36px;height:36px}
+.logo{right:80px;top:240px;width:84px;height:76px}
+.kick{left:80px;top:240px;color:var(--red)}
+.vs{left:50%;top:960px;transform:translate(-50%,-50%);width:120px;height:120px;border-radius:50%;background:var(--ink);border:6px solid var(--off);display:grid;place-items:center;font-family:var(--display);font-size:46px;color:#fff}
+.photo{right:-140px;bottom:0;height:560px;filter:drop-shadow(-20px 0 40px rgba(0,0,0,.35))}
+</style></head><body>
+<div class="canvas story grain">
+  <div class="abs half"></div><div class="abs half2"></div>
+  <img class="abs photo" src="fotos/joao-terno-recorte.png">
+  <div class="abs kick kicker">Mito ou verdade?</div>
+  <div class="abs logo logo-red"></div>
+  <div class="abs mito"><span class="label"><i>✕</i>MITO</span></div>
+  <div class="abs q">“Consórcio é só pra quem não tem pressa.”</div>
+  
+  <div class="abs vs">VS</div>
+  <div class="abs verd"><span class="label"><i>✓</i>VERDADE</span></div>
+  <div class="abs a">Com <span class="serif">lance</span> — inclusive usando parte da própria carta — você pode <u style="text-decoration-thickness:5px;text-underline-offset:8px">antecipar sua contemplação.</u></div>
+  <div class="abs a2">Estratégia de lance é o que eu faço com meus clientes. Me chama que eu te explico como funciona.</div>
+  <div class="abs cta2">Quero entender
+    <svg viewBox="0 0 24 24" fill="none" stroke="#E01E26" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+</div></body></html>

@@ -1,0 +1,28 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.light{background:var(--off);color:var(--ink)}
+.dark{background:radial-gradient(70% 50% at 100% 0%,#330709 0%,rgba(10,10,11,0) 70%),var(--ink);color:#fff}
+.top{left:72px;right:72px;top:64px;display:flex;justify-content:space-between;align-items:center}
+.logo{width:80px;height:72px}
+.dots{left:72px;bottom:64px;display:flex;gap:10px;align-items:center}
+.dots i{width:12px;height:12px;border-radius:50%;background:currentColor;opacity:.25}
+.dots i.on{width:40px;border-radius:999px;background:var(--red);opacity:1}
+.swipe{right:72px;bottom:56px;display:flex;align-items:center;gap:12px;font-weight:800;font-size:24px;letter-spacing:.2em;text-transform:uppercase}
+.swipe svg{width:36px;height:36px}
+.num{right:64px;top:190px;font-family:var(--display);font-size:540px;line-height:.8;color:transparent;-webkit-text-stroke:4px var(--red);opacity:.9}
+.step{left:72px;top:170px;font-weight:800;font-size:26px;letter-spacing:.28em;text-transform:uppercase;color:var(--red)}
+.ic{left:72px;top:240px;width:120px;height:120px;border-radius:30px;background:var(--red);display:grid;place-items:center;box-shadow:0 20px 40px -16px rgba(224,30,38,.6)}
+.ic svg{width:64px;height:64px}
+.t{left:72px;right:72px;top:620px;font-size:132px}
+.t .serif{font-size:112px;color:var(--red);display:block;margin-top:6px;line-height:1}
+.b{left:72px;width:820px;top:960px;font-size:36px;line-height:1.35;font-weight:500}
+.light .b{color:#34343a}.dark .b{color:#d6d6db}
+.b b{font-weight:800}.light .b b{color:var(--ink)}.dark .b b{color:#fff}
+</style></head><body><div class="canvas light grain"><div class="abs top"><div class="kicker" style="color:var(--red)">Consórcio Ademicon</div><div class="logo logo-ink"></div></div>
+<div class="abs num">3</div>
+<div class="abs step">Passo 3 de 4</div>
+<div class="abs ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="m9 13-2 8 5-3 5 3-2-8"/></svg></div>
+<div class="abs t display">Seja<span class="serif">contemplado.</span></div>
+<div class="abs b">Todo mês tem assembleia. A contemplação sai por <b>sorteio</b> ou por <b>lance</b> — e com estratégia de lance dá pra antecipar.</div>
+<div class="abs dots"><i></i><i></i><i></i><i class="on"></i><i></i><i></i></div><div class="abs swipe">Arraste <svg viewBox="0 0 24 24" fill="none" stroke="#E01E26" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+</div></body></html>

@@ -1,0 +1,48 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.canvas{background:var(--off);color:var(--ink)}
+.dots{inset:0;background-image:radial-gradient(rgba(10,10,11,.08) 1.5px,transparent 1.6px);background-size:26px 26px;-webkit-mask:linear-gradient(200deg,#000 0%,transparent 55%)}
+.circle{right:-140px;top:500px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle at 40% 35%,var(--red) 0%,var(--red-deep) 70%)}
+.photo{right:-330px;bottom:0;height:800px}
+.top{left:72px;top:72px;right:72px;display:flex;justify-content:space-between;align-items:center}
+.logo{width:84px;height:76px}
+.h{left:72px;top:178px;font-size:128px;line-height:.95;color:var(--ink)}
+.h .serif{font-size:120px;color:var(--red);display:block;margin-top:2px}
+.receipt{left:72px;top:560px;width:520px;background:#fff;padding:36px 40px 40px;transform:rotate(-3.5deg);
+  box-shadow:0 30px 60px -20px rgba(10,10,11,.35),0 2px 0 rgba(10,10,11,.04);}
+.receipt .t{font-weight:800;font-size:22px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink);display:flex;justify-content:space-between}
+.receipt .t span{color:#aaa;letter-spacing:.1em}
+.row{display:flex;justify-content:space-between;align-items:center;font-size:27px;font-weight:500;padding:10px 0;border-bottom:2px dashed #e3e3e3;font-variant-numeric:tabular-nums}
+.row b{font-weight:800;font-size:20px;letter-spacing:.14em;color:#1a7f37;border:2px solid #1a7f37;border-radius:6px;padding:3px 10px}
+.total{margin-top:22px;display:flex;justify-content:space-between;align-items:baseline}
+.total small{font-size:20px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#777;display:block;max-width:220px;line-height:1.25}
+.total strong{font-family:var(--display);font-size:64px;color:var(--red);font-weight:400}
+.stamp{left:560px;top:430px;transform:rotate(-9deg);border:7px solid var(--red);color:var(--red);font-family:var(--display);font-size:54px;
+  padding:6px 22px 10px;border-radius:14px;letter-spacing:.02em;background:var(--off);box-shadow:0 20px 40px -18px rgba(0,0,0,.4)}
+.sub{left:72px;top:1060px;width:540px;font-size:32px;line-height:1.28;font-weight:500;color:#2a2a2e}
+.sub b{font-weight:800;color:var(--ink)}
+.bottom{left:72px;bottom:64px}
+.name{right:48px;bottom:60px;background:var(--ink);color:#fff;padding:16px 22px;border-radius:14px;font-weight:700;font-size:22px;border-left:5px solid var(--red)}
+.name small{display:block;font-weight:500;font-size:17px;opacity:.7;margin-top:2px}
+</style></head><body>
+<div class="canvas grain">
+  <div class="abs dots"></div>
+  <div class="abs circle"></div>
+  <img class="abs photo" src="fotos/joao-terno-recorte.png">
+  <div class="abs top"><div class="kicker" style="color:var(--red)">Pergunta rápida</div><div class="logo logo-red"></div></div>
+  <div class="abs h display">Você já paga<br>um imóvel<span class="serif">todo mês.</span></div>
+  <div class="abs receipt">
+    <div class="t">Recibo · Aluguel <span>Nº 048</span></div>
+    <div style="height:14px"></div>
+    <div class="row">Mês 12 <b>PAGO</b></div>
+    <div class="row">Mês 24 <b>PAGO</b></div>
+    <div class="row">Mês 36 <b>PAGO</b></div>
+    <div class="row">Mês 48 <b>PAGO</b></div>
+    <div class="total"><small>Patrimônio construído</small><strong>R$ 0,00</strong></div>
+  </div>
+  <div class="abs stamp">SÓ QUE NÃO É SEU</div>
+  <div class="abs sub">Com a carta de crédito Ademicon, a parcela deixa de ser despesa e vira <b>patrimônio seu.</b></div>
+  <div class="abs bottom"><div class="cta">Quero minha simulação
+    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div></div>
+  <div class="abs name">João Carlos Cunzolo Jr.<small>Representante Ademicon</small></div>
+</div></body></html>
