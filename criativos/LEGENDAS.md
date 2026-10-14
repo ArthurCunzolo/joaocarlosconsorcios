@@ -77,3 +77,17 @@ Consórcio parece complicado, mas cabe em 4 passos:
 Salva esse post pra consultar depois e me conta nos comentários: qual é o seu passo 1? 👇
 📲 (11) 99605-0690
 #consorcio #ademicon #educacaofinanceira #cartadecredito #semjuros
+
+---
+
+# Vídeo (Reels / Stories)
+
+**video/reels-joao-carlos-consorcio.mp4** — 1080×1920, 20s, 30fps, sem música (adicionar áudio em alta direto no Instagram).
+Roteiro: "Juros é o preço da pressa" → "Você quer… casa própria / carro novo / seu negócio" → "Consórcio Ademicon: sem juros, sem entrada obrigatória, poder de compra à vista" → "Prazer, João Carlos" → "Faça sua simulação · WhatsApp (11) 99605-0690".
+Fonte editável: `_src/video-reels-juca.html` (render: `node render-video.cjs video-reels-juca.html <pasta-frames> 30 20` + ffmpeg).
+
+Legenda sugerida:
+Juros é o preço da pressa. Planejamento é o caminho mais inteligente pra casa, o carro ou o seu negócio. 🚀
+No consórcio Ademicon: sem juros, sem entrada obrigatória e com poder de compra à vista.
+📲 Me chama no WhatsApp (11) 99605-0690 e faça sua simulação sem compromisso.
+#consorcio #ademicon #semjuros #planejamentofinanceiro #cartadecredito
