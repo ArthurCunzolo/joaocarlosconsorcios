@@ -82,9 +82,9 @@ Salva esse post pra consultar depois e me conta nos comentários: qual é o seu 
 
 # Vídeo (Reels / Stories)
 
-**video/reels-joao-carlos-consorcio.mp4** — 1080×1920, 20s, 30fps, sem música (adicionar áudio em alta direto no Instagram).
+**video/reels-joao-carlos-consorcio.mp4** — 1080×1920, 20s, 30fps, com trilha original livre de direitos (gerada por `_src/gerar-trilha.py`, sincronizada com os cortes; −14 LUFS).
 Roteiro: "Juros é o preço da pressa" → "Você quer… casa própria / carro novo / seu negócio" → "Consórcio Ademicon: sem juros, sem entrada obrigatória, poder de compra à vista" → "Prazer, João Carlos" → "Faça sua simulação · WhatsApp (11) 99605-0690".
-Fonte editável: `_src/video-reels-juca.html` (render: `node render-video.cjs video-reels-juca.html <pasta-frames> 30 20` + ffmpeg).
+Fonte editável: `_src/video-reels-juca.html` (render: `node render-video.cjs video-reels-juca.html <pasta-frames> 30 20` + ffmpeg; trilha: `python3 gerar-trilha.py trilha.wav` e mux com ffmpeg).
 
 Legenda sugerida:
 Juros é o preço da pressa. Planejamento é o caminho mais inteligente pra casa, o carro ou o seu negócio. 🚀
