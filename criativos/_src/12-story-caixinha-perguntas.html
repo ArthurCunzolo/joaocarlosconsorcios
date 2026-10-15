@@ -1,0 +1,28 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.canvas{background:radial-gradient(80% 40% at 50% 100%,#3a080b 0%,rgba(10,10,11,0) 70%),var(--ink);color:#fff}
+.top{left:80px;right:80px;top:236px;display:flex;justify-content:space-between;align-items:center}
+.logo{width:80px;height:72px}
+.ph{left:80px;right:80px;top:340px;height:720px;border-radius:40px;background:url(fotos/joao-selfie-ademicon.jpg) 50% 0%/cover;box-shadow:0 40px 80px -30px rgba(0,0,0,.8)}
+.ph::after{content:"";position:absolute;inset:0;border-radius:40px;background:linear-gradient(180deg,rgba(10,10,11,0) 55%,rgba(10,10,11,.85) 100%)}
+.loc{left:120px;top:970px;display:flex;align-items:center;gap:12px;font-weight:700;font-size:28px;z-index:2}
+.loc svg{width:34px;height:34px}
+.live{right:120px;top:380px;background:var(--red);font-weight:800;font-size:20px;letter-spacing:.2em;padding:10px 18px;border-radius:10px;display:flex;align-items:center;gap:10px}
+.live i{width:10px;height:10px;border-radius:50%;background:#fff}
+.h{left:80px;right:80px;top:1110px;font-size:150px}
+.h .serif{display:block;font-size:92px;color:var(--red);margin-top:6px;line-height:1}
+.ex{left:80px;right:80px;top:1465px;display:flex;flex-wrap:wrap;gap:12px}
+.ex span{border:2px solid #34343b;background:#16161a;border-radius:999px;padding:12px 22px;font-size:25px;font-weight:600;color:#d9d9de}
+.hint{left:0;right:0;top:1640px;text-align:center;font-weight:800;font-size:24px;letter-spacing:.24em;text-transform:uppercase;color:var(--red)}
+.hint svg{display:block;margin:8px auto 0;width:40px;height:40px}
+</style></head><body>
+<div class="canvas story grain">
+  <div class="abs top"><div class="kicker" style="color:#fff;opacity:.75">Caixinha de perguntas</div><div class="logo logo-white"></div></div>
+  <div class="abs ph"></div>
+  <div class="abs live"><i></i>HOJE</div>
+  <div class="abs loc"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Direto da Ademicon</div>
+  <div class="abs h display">Me pergunta<span class="serif">qualquer coisa sobre consórcio.</span></div>
+  <div class="abs ex"><span>Como funciona o lance?</span><span>Posso usar o FGTS?</span><span>Quanto tempo demora?</span><span>Vale mais que financiar?</span></div>
+  <div class="abs hint">Manda sua pergunta
+    <svg viewBox="0 0 24 24" fill="none" stroke="#E01E26" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></div>
+</div></body></html>

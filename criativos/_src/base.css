@@ -1,0 +1,28 @@
+@import url("fonts/fonts.css");
+:root{
+  --red:#E01E26; --red-deep:#A8151B; --red-dark:#6E0C10;
+  --ink:#0A0A0B; --ink-2:#16161A; --off:#F4F2EE; --muted:#9AA0A8;
+  --display:"Anton",Impact,sans-serif;
+  --sans:"Inter Tight",system-ui,sans-serif;
+  --serif:"Instrument Serif",Georgia,serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#000}
+body{font-family:var(--sans);-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+.canvas{position:relative;overflow:hidden;width:1080px;height:1350px}
+.canvas.story{height:1920px}
+.abs{position:absolute}
+.display{font-family:var(--display);text-transform:uppercase;line-height:.9;letter-spacing:-.005em}
+.serif{font-family:var(--serif);font-style:italic;font-weight:400;text-transform:none;letter-spacing:0}
+.red{color:var(--red)}
+.grain::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.10;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.logo-white{background:url(fotos/ademicon-white.png) center/contain no-repeat}
+.logo-red{background:url(fotos/ademicon-red.png) center/contain no-repeat}
+.logo-ink{background:url(fotos/ademicon-ink.png) center/contain no-repeat}
+.cta{display:inline-flex;align-items:center;gap:18px;background:var(--red);color:#fff;font-weight:800;font-size:34px;
+  padding:26px 40px;border-radius:999px;letter-spacing:-.01em;box-shadow:0 18px 40px -12px rgba(224,30,38,.6)}
+.cta svg{width:40px;height:40px;flex:none}
+.sig{font-weight:700;font-size:28px;letter-spacing:-.01em}
+.sig small{display:block;font-weight:500;font-size:22px;opacity:.7;margin-top:4px;letter-spacing:.02em}
+.kicker{font-weight:700;font-size:24px;letter-spacing:.28em;text-transform:uppercase}

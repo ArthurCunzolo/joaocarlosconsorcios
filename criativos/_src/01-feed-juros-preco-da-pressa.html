@@ -1,0 +1,37 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.canvas{background:radial-gradient(120% 80% at 80% 100%,#2a0507 0%,#0A0A0B 55%) ,#0A0A0B;color:#fff}
+.slash{left:640px;top:-100px;width:330px;height:2000px;background:linear-gradient(180deg,var(--red) 0%,var(--red-deep) 70%,var(--red-dark) 100%);transform:rotate(-14deg);transform-origin:top left;opacity:.95}
+.slash2{left:580px;top:-100px;width:22px;height:2000px;background:var(--red);transform:rotate(-14deg);transform-origin:top left;opacity:.55}
+.photo{right:-250px;bottom:0;height:900px;filter:drop-shadow(-30px 0 60px rgba(0,0,0,.6))}
+.top{left:72px;top:72px;right:72px;display:flex;justify-content:space-between;align-items:center}
+.logo{width:92px;height:84px}
+.h{left:72px;top:210px;width:760px;font-size:190px}
+.h .serif{font-size:150px;display:block;margin:-6px 0 4px;color:#fff}
+.h .line{display:block}
+.sub{left:72px;top:860px;width:560px;font-size:34px;line-height:1.3;font-weight:500;color:#e9e9ea}
+.sub b{color:#fff;font-weight:800}
+.bottom{left:72px;bottom:72px}
+.scrim{left:0;right:0;bottom:0;height:620px;background:linear-gradient(90deg,rgba(10,10,11,.85) 0%,rgba(10,10,11,.4) 45%,rgba(10,10,11,0) 65%);-webkit-mask:linear-gradient(180deg,transparent,#000 40%)}
+.tag{left:72px;top:156px;display:flex;gap:14px;align-items:center}
+.tag i{width:56px;height:4px;background:var(--red);display:block}
+.strike{position:relative;display:inline-block}
+.strike::after{content:"";position:absolute;left:-10px;right:-10px;top:52%;height:18px;background:var(--red);transform:rotate(-4deg)}
+</style></head><body>
+<div class="canvas grain">
+  <div class="abs slash"></div><div class="abs slash2"></div>
+  <img class="abs photo" src="fotos/joao-terno-recorte.png">
+  <div class="abs scrim"></div>
+  <div class="abs top"><div class="kicker" style="color:#fff;opacity:.8">Consórcio Ademicon</div><div class="logo logo-white"></div></div>
+  <div class="abs h display">
+    <span class="line">Juros</span>
+    <span class="serif">é o preço da</span>
+    <span class="line red" style="text-shadow:0 6px 40px rgba(224,30,38,.35)">pressa.</span>
+  </div>
+  <div class="abs sub">No consórcio você troca juros por <b>planejamento</b> — e o dinheiro que iria para o banco fica com você.</div>
+  <div class="abs bottom">
+    <div class="cta">Faça sua simulação
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    <div class="sig" style="margin-top:28px">João Carlos Cunzolo Jr.<small>Representante Ademicon · (11) 99605-0690</small></div>
+  </div>
+</div></body></html>

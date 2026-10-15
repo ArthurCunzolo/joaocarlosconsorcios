@@ -1,0 +1,39 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.canvas{background:radial-gradient(90% 70% at 20% 10%,#f0343b 0%,var(--red) 35%,var(--red-deep) 75%,var(--red-dark) 100%);color:#fff}
+.mark{right:-220px;top:-120px;width:900px;height:820px;opacity:.08;background:url(fotos/ademicon-white.png) center/contain no-repeat}
+.pola{left:120px;top:84px;width:600px;background:#fbfaf7;padding:28px 28px 0;transform:rotate(-4deg);box-shadow:0 40px 70px -24px rgba(40,0,4,.65)}
+.pola .img{width:544px;height:560px;background:url(fotos/joao-selfie-ademicon.jpg) 40% 30%/cover}
+.pola .cap{height:104px;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;font-size:44px;color:#2a2a2e}
+.tape{width:150px;height:44px;background:rgba(255,245,230,.75);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+.t1{left:90px;top:70px;transform:rotate(-38deg)}
+.t2{left:640px;top:60px;transform:rotate(34deg)}
+.badge{left:700px;top:560px;width:230px;height:230px}
+.badge .c{position:absolute;inset:0;border-radius:50%;background:var(--ink);box-shadow:0 20px 40px -12px rgba(0,0,0,.5)}
+.badge svg{position:absolute;inset:0;width:230px;height:230px}
+.badge .mid{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--display);font-size:40px;line-height:.9;text-align:center;color:#fff}
+.badge .mid span{color:var(--red)}
+.h{left:72px;right:72px;top:880px;font-size:122px}
+.sub{left:72px;right:72px;top:1000px;font-family:var(--serif);font-style:italic;font-size:66px;line-height:1.05;color:#ffe1e2}
+.bottom{left:72px;right:72px;bottom:64px;display:flex;justify-content:space-between;align-items:center}
+.wcta{display:inline-flex;align-items:center;gap:16px;background:#fff;color:var(--red);font-weight:800;font-size:30px;padding:22px 34px;border-radius:999px;box-shadow:0 18px 40px -14px rgba(0,0,0,.45)}
+.wcta svg{width:34px;height:34px}
+.who{text-align:right;font-weight:800;font-size:24px}
+.who small{display:block;font-weight:500;font-size:19px;opacity:.8;margin-top:2px}
+</style></head><body>
+<div class="canvas grain">
+  <div class="abs mark"></div>
+  <div class="abs pola"><div class="img"></div><div class="cap">direto da Ademicon</div></div>
+  <div class="abs tape t1"></div><div class="abs tape t2"></div>
+  <div class="abs badge"><div class="c"></div>
+    <svg viewBox="0 0 230 230"><defs><path id="circ" d="M115,115 m-94,0 a94,94 0 1,1 188,0 a94,94 0 1,1 -188,0"/></defs>
+      <text font-family="Inter Tight" font-weight="800" font-size="17" letter-spacing="3.6" fill="#fff"><textPath href="#circ">ATENDIMENTO • DE GENTE • PRA GENTE •</textPath></text></svg>
+    <div class="mid"><div>100%<br><span>real</span></div></div></div>
+  <div class="abs h display">Aqui não tem robô.</div>
+  <div class="abs sub">Tem gente cuidando do seu plano —<br>do primeiro papo à contemplação.</div>
+  <div class="abs bottom">
+    <div class="wcta">Fala comigo
+      <svg viewBox="0 0 24 24" fill="none" stroke="#E01E26" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    <div class="who">João Carlos Cunzolo Jr.<small>Representante Ademicon · (11) 99605-0690</small></div>
+  </div>
+</div></body></html>

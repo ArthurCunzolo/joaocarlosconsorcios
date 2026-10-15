@@ -1,0 +1,47 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.canvas{background:radial-gradient(70% 40% at 100% 30%,#330709 0%,rgba(10,10,11,0) 70%),var(--ink);color:#fff}
+.top{left:80px;right:80px;top:240px;display:flex;justify-content:space-between;align-items:center}
+.logo{width:84px;height:76px}
+.h{left:80px;right:80px;top:330px;font-size:142px;line-height:1.08}
+.h .serif{font-size:120px;color:#fff;opacity:.9}
+.tbl{left:56px;right:56px;top:740px;display:grid;grid-template-columns:1fr 1fr;column-gap:16px}
+.col{border-radius:30px;padding:0 0 18px;overflow:hidden}
+.col.fin{background:#18181c;border:2px solid #26262c}
+.col.con{background:linear-gradient(180deg,var(--red),var(--red-deep));box-shadow:0 30px 70px -20px rgba(224,30,38,.55);transform:translateY(-18px)}
+.hd{padding:30px 30px 24px;font-family:var(--display);font-size:50px;letter-spacing:.02em;text-transform:uppercase;border-bottom:2px solid rgba(255,255,255,.12)}
+.fin .hd{color:#8d8d95}
+.con .hd{display:flex;justify-content:space-between;align-items:center}
+.con .hd span{font-family:var(--sans);font-size:17px;font-weight:800;letter-spacing:.16em;background:#fff;color:var(--red);padding:7px 12px;border-radius:999px}
+.it{padding:22px 30px;height:152px;border-bottom:2px solid rgba(255,255,255,.08)}
+.it:last-child{border-bottom:0}
+.it small{display:block;font-size:17px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;opacity:.6;margin-bottom:10px}
+.it p{font-size:31px;font-weight:700;line-height:1.18;letter-spacing:-.015em;display:flex;gap:12px}
+.it p i{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:20px;font-weight:900;margin-top:2px}
+.fin .it p{color:#c9c9cf}
+.fin .it p i{background:#2c2c33;color:#ff6b70}
+.con .it p i{background:#fff;color:var(--red)}
+.foot{left:80px;right:80px;top:1520px;display:flex;align-items:center;gap:24px}
+.av{width:104px;height:104px;border-radius:50%;background:url(fotos/joao-avatar.jpg) center/cover;box-shadow:0 0 0 4px var(--ink),0 0 0 8px var(--red);flex:none}
+.foot p{font-size:30px;line-height:1.25;font-weight:500;color:#e2e2e5}
+.foot p b{color:#fff;font-weight:800}
+</style></head><body>
+<div class="canvas story grain">
+  <div class="abs top"><div class="kicker" style="color:var(--red)">Antes de assinar</div><div class="logo logo-white"></div></div>
+  <div class="abs h display">Financiamento<br><span class="serif">ou</span> <span class="red">consórcio?</span></div>
+  <div class="abs tbl">
+    <div class="col fin"><div class="hd">Financiamento</div>
+      <div class="it"><small>Juros</small><p><i>✕</i>Sim — e pesam no total</p></div>
+      <div class="it"><small>Entrada</small><p><i>✕</i>Normalmente exigida</p></div>
+      <div class="it"><small>Na hora de comprar</small><p><i>✕</i>Você negocia parcelado</p></div>
+      <div class="it"><small>Custo final</small><p><i>✕</i>Acima do valor à vista</p></div>
+    </div>
+    <div class="col con"><div class="hd">Consórcio <span>ADEMICON</span></div>
+      <div class="it"><small>Juros</small><p><i>✓</i>Zero. Só taxa de administração</p></div>
+      <div class="it"><small>Entrada</small><p><i>✓</i>Não é obrigatória</p></div>
+      <div class="it"><small>Na hora de comprar</small><p><i>✓</i>Carta de crédito = poder de compra à vista</p></div>
+      <div class="it"><small>Custo final</small><p><i>✓</i>Mais perto do valor à vista</p></div>
+    </div>
+  </div>
+  <div class="abs foot"><div class="av"></div><p>Quer ver os <b>números reais</b> do seu caso? Me chama que eu <b>faço a conta com você.</b></p></div>
+</div></body></html>
