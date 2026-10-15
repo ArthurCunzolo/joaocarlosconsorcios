@@ -91,3 +91,13 @@ Juros é o preço da pressa. Planejamento é o caminho mais inteligente pra casa
 No consórcio Ademicon: sem juros, sem entrada obrigatória e com poder de compra à vista.
 📲 Me chama no WhatsApp (11) 99605-0690 e faça sua simulação sem compromisso.
 #consorcio #ademicon #semjuros #planejamentofinanceiro #cartadecredito
+
+**video/reels-feminino-realize-seu-sonho.mp4** — 1080×1920, 20s, trilha original suave (`_src/gerar-trilha-feminina.py`).
+Roteiro: "Aquele sonho que você vive adiando…" → foto da modelo + "tem data pra sair do papel." → "é a sua vez." com silicone / cirurgia plástica / procedimentos estéticos → "com a carta de crédito Ademicon: sem juros, sem entrada obrigatória, no seu tempo" → João + WhatsApp + "SONHO" no direct.
+Fonte editável: `_src/video-reels-feminino.html`.
+
+Legenda sugerida:
+Aquele sonho que você vive adiando tem data pra sair do papel. ✨
+Com o consórcio de serviços Ademicon, a carta de crédito pode ser usada em cirurgia plástica, prótese de silicone e procedimentos estéticos — sem juros e no seu tempo.
+Me manda "SONHO" no direct ou chama no WhatsApp (11) 99605-0690 💬
+#consorcio #ademicon #cirurgiaplastica #silicone #autoestima #realizeseusonho

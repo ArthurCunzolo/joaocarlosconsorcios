@@ -1,0 +1,118 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css"><link rel="stylesheet" href="fem.css">
+<style>
+.canvas{background:var(--blush)}
+.sc{position:absolute;inset:0;overflow:hidden;opacity:0}
+.c{position:absolute;left:0;right:0;text-align:center}
+.sp{position:absolute;fill:var(--gold)}
+.blush{background:radial-gradient(60% 40% at 15% 10%,#fff5f1 0%,transparent 70%),radial-gradient(55% 45% at 95% 60%,#f1cfc3 0%,transparent 70%),var(--blush)}
+/* S1 */
+.l1{font-family:var(--serif);color:var(--wine);font-size:150px;line-height:1.02}
+#a1{top:640px}#a2{top:800px}
+#a3{top:960px;font-style:italic;color:var(--red);font-size:170px}
+/* S2 */
+#ph2{position:absolute;inset:-40px;background:url(fotos/mulher-story.jpg) 62% 70%/cover no-repeat}
+#ov2{position:absolute;left:0;right:0;top:0;height:1100px;background:linear-gradient(180deg,rgba(248,234,228,.96) 0%,rgba(248,234,228,.9) 45%,rgba(248,234,228,0) 100%)}
+#b1{top:330px;font-family:var(--serif);font-style:italic;color:var(--red);font-size:150px;line-height:1}
+#b2{top:490px;font-family:var(--serif);font-style:italic;color:var(--red);font-size:150px;line-height:1}
+/* S3 */
+#k3{top:390px;font-weight:800;font-size:28px;letter-spacing:.3em;color:var(--wine)}
+#arch3{position:absolute;left:250px;top:560px;width:580px;height:720px}
+#arch3 .you{top:220px;font-size:190px;line-height:1}
+.ch3{position:absolute;font-size:44px;padding:24px 38px}
+.ch3 i{width:18px;height:18px}
+/* S4 */
+#s4{background:radial-gradient(80% 60% at 30% 20%,#8a1a2c 0%,var(--wine) 45%,var(--wine-2) 100%);color:#fff}
+#t4{top:430px;font-family:var(--serif);font-style:italic;font-size:130px;color:#ffd9d3;line-height:1}
+.pk{position:absolute;left:110px;right:110px;display:flex;align-items:center;gap:30px;font-weight:800;font-size:64px;letter-spacing:-.02em;opacity:0}
+.pk svg{width:64px;height:64px;fill:#f2b8a8;flex:none}
+#sub4{top:1360px;left:110px;right:110px;text-align:left;font-size:46px;line-height:1.35;font-weight:500;color:#f4d6d0}
+/* S5 */
+#logo5{position:absolute;left:50%;top:280px;width:150px;height:136px;margin-left:-75px}
+#q5{top:500px;font-family:var(--serif);color:var(--wine);font-size:120px;line-height:1}
+#q5 em{color:var(--red)}
+#av5{position:absolute;left:50%;top:820px;width:300px;height:300px;margin-left:-150px;border-radius:50%;background:url(fotos/joao-avatar.jpg) center/cover;box-shadow:0 0 0 10px var(--blush),0 0 0 16px var(--wine),0 30px 60px -20px rgba(74,9,20,.5)}
+#n5{top:1170px;font-weight:800;font-size:46px;color:var(--wine)}
+#r5{top:1232px;font-weight:500;font-size:32px;color:#7a4148}
+#pill5{position:absolute;left:50%;top:1340px;transform:translateX(-50%);background:var(--wine);color:#fff;border-radius:999px;padding:34px 60px;font-weight:800;font-size:56px;white-space:nowrap;box-shadow:0 30px 60px -20px rgba(74,9,20,.6)}
+#pill5 small{display:block;font-size:24px;letter-spacing:.24em;font-weight:800;color:#f2b8a8;text-align:center;margin-bottom:6px}
+#dm5{top:1550px;font-family:var(--serif);font-style:italic;font-size:62px;color:var(--red)}
+#veil{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}
+</style></head><body>
+<div class="canvas story grain">
+ <div class="sc blush" id="s1">
+  <div class="c l1" id="a1">Aquele sonho</div>
+  <div class="c l1" id="a2">que você vive</div>
+  <div class="c l1" id="a3">adiando…</div>
+  <svg class="sp" id="sp1" style="left:180px;top:520px;width:60px;height:60px" viewBox="0 0 24 24"><path d="M12 0c.8 6.2 5.8 11.2 12 12-6.2.8-11.2 5.8-12 12-.8-6.2-5.8-11.2-12-12C6.2 11.2 11.2 6.2 12 0Z"/></svg>
+  <svg class="sp" id="sp2" style="right:170px;top:1220px;width:44px;height:44px" viewBox="0 0 24 24"><path d="M12 0c.8 6.2 5.8 11.2 12 12-6.2.8-11.2 5.8-12 12-.8-6.2-5.8-11.2-12-12C6.2 11.2 11.2 6.2 12 0Z"/></svg>
+  <svg class="sp" id="sp3" style="right:260px;top:470px;width:28px;height:28px" viewBox="0 0 24 24"><path d="M12 0c.8 6.2 5.8 11.2 12 12-6.2.8-11.2 5.8-12 12-.8-6.2-5.8-11.2-12-12C6.2 11.2 11.2 6.2 12 0Z"/></svg>
+ </div>
+ <div class="sc" id="s2">
+  <div id="ph2"></div><div id="ov2"></div>
+  <div class="c" id="b1">tem data pra</div>
+  <div class="c" id="b2">sair do papel.</div>
+ </div>
+ <div class="sc blush" id="s3">
+  <div class="c" id="k3">CONSÓRCIO DE SERVIÇOS ADEMICON</div>
+  <div class="arch" id="arch3"><div class="you"><span style="font-size:80px;display:block;margin-bottom:-14px">é a sua</span>vez.</div>
+   <svg class="spark" style="right:110px;top:120px;width:60px;height:60px" viewBox="0 0 24 24"><path d="M12 0c.8 6.2 5.8 11.2 12 12-6.2.8-11.2 5.8-12 12-.8-6.2-5.8-11.2-12-12C6.2 11.2 11.2 6.2 12 0Z"/></svg>
+   <svg class="spark" style="left:110px;bottom:170px;width:34px;height:34px;opacity:.8" viewBox="0 0 24 24"><path d="M12 0c.8 6.2 5.8 11.2 12 12-6.2.8-11.2 5.8-12 12-.8-6.2-5.8-11.2-12-12C6.2 11.2 11.2 6.2 12 0Z"/></svg></div>
+  <div class="chip ch3" id="h1" style="left:70px;top:650px"><i></i>Prótese de silicone</div>
+  <div class="chip ch3" id="h2" style="right:50px;top:1070px"><i></i>Cirurgia plástica</div>
+  <div class="chip ch3" id="h3" style="left:60px;top:1290px"><i></i>Procedimentos estéticos</div>
+ </div>
+ <div class="sc" id="s4">
+  <div class="c" id="t4">com a carta de crédito<br>Ademicon:</div>
+  <div class="pk" id="p1" style="top:800px"><svg viewBox="0 0 24 24"><path d="M12 0c.8 6.2 5.8 11.2 12 12-6.2.8-11.2 5.8-12 12-.8-6.2-5.8-11.2-12-12C6.2 11.2 11.2 6.2 12 0Z"/></svg>Sem juros</div>
+  <div class="pk" id="p2" style="top:980px"><svg viewBox="0 0 24 24"><path d="M12 0c.8 6.2 5.8 11.2 12 12-6.2.8-11.2 5.8-12 12-.8-6.2-5.8-11.2-12-12C6.2 11.2 11.2 6.2 12 0Z"/></svg>Sem entrada obrigatória</div>
+  <div class="pk" id="p3" style="top:1160px"><svg viewBox="0 0 24 24"><path d="M12 0c.8 6.2 5.8 11.2 12 12-6.2.8-11.2 5.8-12 12-.8-6.2-5.8-11.2-12-12C6.2 11.2 11.2 6.2 12 0Z"/></svg>No seu tempo</div>
+  <div class="c" id="sub4">…com a clínica e o profissional que você escolher.</div>
+ </div>
+ <div class="sc blush" id="s5">
+  <div id="logo5" class="logo-red"></div>
+  <div class="c" id="q5">Bora tirar esse<br><em>sonho</em> do papel?</div>
+  <div id="av5"></div>
+  <div class="c" id="n5">João Carlos Cunzolo Jr.</div>
+  <div class="c" id="r5">Representante Ademicon</div>
+  <div id="pill5"><small>WHATSAPP</small>(11) 99605-0690</div>
+  <div class="c" id="dm5">ou me manda "SONHO" no direct</div>
+ </div>
+ <div id="veil"></div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const seg=(t,a,b)=>cl((t-a)/(b-a));
+const eo=x=>1-Math.pow(1-x,3);
+const eio=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+const eback=x=>{const c1=1.4,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+function vis(id,t,a,b,f=.35){const o=Math.min(seg(t,a,a+f),1-seg(t,b-f,b));$(id).style.opacity=o;return o}
+function rise(id,t,a,d=.6,dy=50){const p=eo(seg(t,a,a+d));$(id).style.opacity=seg(t,a,a+d*.7);$(id).style.transform='translateY('+(dy*(1-p))+'px)';$(id).style.filter='blur('+(8*(1-p))+'px)'}
+function twinkle(id,t,a,ph){const s=seg(t,a,a+.5);const k=.75+.25*Math.sin((t+ph)*5);$(id).style.opacity=s*k;$(id).style.transform='scale('+(eback(s)*k)+') rotate('+(t*30+ph*40)+'deg)'}
+const CUTS=[3.8,8.0,12.4,16.4];
+window.render=function(t){
+ vis('s1',t,0,CUTS[0]+.2,.3);
+ rise('a1',t,.2);rise('a2',t,.9);rise('a3',t,1.6,.8,70);
+ twinkle('sp1',t,.5,0);twinkle('sp2',t,1.2,1);twinkle('sp3',t,2.0,2);
+ vis('s2',t,CUTS[0]-.2,CUTS[1]+.2);
+ {const p=seg(t,CUTS[0]-.2,CUTS[1]+.2);$('ph2').style.transform='scale('+(1.12-.1*eio(p))+') translateY('+(-20*p)+'px)';}
+ rise('b1',t,4.2,.7);rise('b2',t,4.8,.7);
+ vis('s3',t,CUTS[1]-.2,CUTS[2]+.2);
+ {const p=eo(seg(t,8.0,8.8));$('arch3').style.transform='translateY('+(120*(1-p))+'px) scale('+(.92+.08*p)+')';$('arch3').style.opacity=seg(t,8.0,8.5);}
+ rise('k3',t,8.2,.5,20);
+ [['h1',9.0],['h2',9.5],['h3',10.0]].forEach(([id,a])=>{const p=eback(seg(t,a,a+.5));$(id).style.opacity=seg(t,a,a+.2);$(id).style.transform='scale('+(.4+.6*p)+')'});
+ vis('s4',t,CUTS[2]-.2,CUTS[3]+.2);
+ rise('t4',t,12.6,.6);
+ [['p1',13.2],['p2',13.8],['p3',14.4]].forEach(([id,a])=>{const p=eo(seg(t,a,a+.5));$(id).style.opacity=seg(t,a,a+.3);$(id).style.transform='translateX('+(-80*(1-p))+'px)'});
+ rise('sub4',t,15.0,.6,20);
+ vis('s5',t,CUTS[3]-.2,21,.4);
+ {const p=eback(seg(t,16.5,17.0));$('logo5').style.opacity=seg(t,16.5,16.8);$('logo5').style.transform='scale('+(.6+.4*p)+')';}
+ rise('q5',t,16.7,.6);
+ {const p=eback(seg(t,17.3,17.8));$('av5').style.opacity=seg(t,17.3,17.5);$('av5').style.transform='scale('+(.5+.5*p)+')';}
+ rise('n5',t,17.6,.5,20);rise('r5',t,17.8,.5,20);
+ {const p=eback(seg(t,18.1,18.5));const pul=t>18.5?1+.035*Math.sin((t-18.5)*2*Math.PI*1.1):1;$('pill5').style.opacity=seg(t,18.1,18.3);$('pill5').style.transform='translateX(-50%) scale('+((.6+.4*p)*pul)+')';}
+ rise('dm5',t,18.6,.5,20);
+ let f=0;CUTS.forEach(c=>{f=Math.max(f,1-Math.abs(t-c)/.22)});$('veil').style.opacity=cl(f)*.55;
+};
+render(0);
+</script></body></html>
